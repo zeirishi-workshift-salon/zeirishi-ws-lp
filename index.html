@@ -107,8 +107,10 @@ strong{font-weight:700}
 .btn-gold,.sticky-cta{overflow:hidden}
 .btn-gold::after,.sticky-cta::after{content:"";position:absolute;top:-6px;bottom:-6px;left:-70%;width:46%;background:linear-gradient(105deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 45%,rgba(255,255,255,.85) 50%,rgba(255,255,255,.55) 55%,rgba(255,255,255,0) 100%);transform:skewX(-18deg);opacity:0;pointer-events:none;animation:ctaShine 3.8s ease-in-out infinite}
 .btn-gold:hover::after,.sticky-cta:hover::after{animation-duration:1.6s}
+.btn-gold,.sticky-cta{animation:ctaPulse 3.8s ease-in-out infinite}
 @keyframes ctaShine{0%{left:-70%;opacity:0}12%{opacity:.9}48%{left:118%;opacity:.9}58%{left:118%;opacity:0}100%{left:118%;opacity:0}}
-@media (prefers-reduced-motion:reduce){.btn-gold::after,.sticky-cta::after{animation:none}}
+@keyframes ctaPulse{0%{scale:1}26%{scale:1.05}52%{scale:1}100%{scale:1}}
+@media (prefers-reduced-motion:reduce){.btn-gold,.sticky-cta,.btn-gold::after,.sticky-cta::after{animation:none}}
 
 /* ---------- header ---------- */
 .site-header{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .3s,box-shadow .3s,padding .3s;padding:16px 0}
