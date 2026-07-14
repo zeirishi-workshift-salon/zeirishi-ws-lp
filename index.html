@@ -495,7 +495,11 @@ strong{font-weight:700}
 .mo-fact{margin-top:14px;font-size:.86rem;font-weight:700;color:var(--gold-bright)}
 .mo-close strong{color:var(--gold-bright)}
 .mo-note{text-align:center;margin-top:16px;font-size:.72rem;color:var(--muted-2)}
-.sd-block{margin-top:64px}
+.sd-block{margin-top:44px;padding:34px 34px 38px;border-radius:20px}
+.sd-block.sd-learn{background:#eef4fb}
+.sd-block.sd-use{background:#fbf5e9}
+.sd-block.sd-settle{background:#eef6f0}
+.sd-block.sd-expand{background:#f4f1fa}
 .sd-block:first-of-type{margin-top:0}
 .sd-head{display:flex;align-items:center;gap:14px;margin-bottom:24px}
 .sd-head h3{font-family:var(--serif);font-size:1.5rem;color:var(--ink);line-height:1.2}
@@ -520,7 +524,8 @@ strong{font-weight:700}
 .sd-txt li{font-size:.8rem;color:var(--muted);line-height:1.7;padding-left:16px;position:relative}
 .sd-txt li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .sd-close{margin-top:12px;font-size:.8rem;font-weight:700;color:var(--gold-deep);line-height:1.7}
-@media(max-width:900px){.sd-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.sd-grid{grid-template-columns:1fr}
+  .sd-block{padding:20px 14px 24px}}
 .eco-bands{margin-top:34px;display:flex;flex-direction:column;gap:14px}
 .eco-band{display:flex;align-items:center;gap:16px;background:var(--grad-navy-flat,linear-gradient(165deg,#15314f,#0c1c30));border-radius:var(--radius);padding:20px 26px;color:#fff}
 .eco-band .eb-ic{width:42px;height:42px;flex:none;border-radius:10px;display:grid;place-items:center;background:rgba(176,137,73,.16);color:var(--gold-bright)}
@@ -1359,7 +1364,7 @@ strong{font-weight:700}
       <div class="gold-rule"><i></i><b></b><i></i></div>
       <p class="section-sub">「学ぶ・使う・定着する・広げる」の4つのステップごとに、各サービスをご紹介します。</p>
     </div>
-    <div class="sd-block">
+    <div class="sd-block sd-learn">
       <header class="sd-head reveal">
         <span class="flow-num">1</span>
         <div><h3>学ぶ</h3><small>インプット</small></div>
@@ -1424,7 +1429,7 @@ strong{font-weight:700}
         </article>
       </div>
     </div>
-    <div class="sd-block">
+    <div class="sd-block sd-use">
       <header class="sd-head reveal">
         <span class="flow-num">2</span>
         <div><h3>使う</h3><small>実践・即効性</small></div>
@@ -1490,7 +1495,7 @@ strong{font-weight:700}
         </article>
       </div>
     </div>
-    <div class="sd-block">
+    <div class="sd-block sd-settle">
       <header class="sd-head reveal">
         <span class="flow-num">3</span>
         <div><h3>定着する</h3><small>伴走・自走化</small></div>
@@ -1555,7 +1560,7 @@ strong{font-weight:700}
         </article>
       </div>
     </div>
-    <div class="sd-block">
+    <div class="sd-block sd-expand">
       <header class="sd-head reveal">
         <span class="flow-num">4</span>
         <div><h3>広げる</h3><small>ワークシフト</small></div>
