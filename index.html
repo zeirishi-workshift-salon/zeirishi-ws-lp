@@ -90,6 +90,7 @@ strong{font-weight:700}
 }
 .btn-sm{padding:.6em 1.25em;font-size:.85rem}
 .btn-lg{padding:1.05em 2.2em;font-size:1.08rem}
+.btn{max-width:100%;text-align:center;line-height:1.45;white-space:normal}
 .btn-gold{
   color:#23170a;background:var(--grad-gold);
   box-shadow:0 14px 30px rgba(140,104,46,.4),inset 0 1px 0 rgba(255,255,255,.4);
@@ -695,12 +696,16 @@ strong{font-weight:700}
 .offer-title{font-family:var(--serif);font-weight:900;font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:22px}
 .offer-lead{color:rgba(255,255,255,.82);font-size:1.02rem;margin-bottom:34px;line-height:1.95}
 .offer-list{list-style:none;margin:0 auto 36px;padding:0;max-width:540px;text-align:left;display:flex;flex-direction:column;gap:12px}
-.offer-list li{display:flex;align-items:center;gap:12px;font-size:.96rem;color:rgba(255,255,255,.92);background:rgba(255,255,255,.05);border:1px solid rgba(176,137,73,.28);padding:.9em 1.3em;border-radius:12px}
-.offer-list svg{width:20px;height:20px;color:var(--gold-bright);flex:none}
+.offer-list li{display:flex;align-items:flex-start;gap:12px;font-size:.96rem;color:rgba(255,255,255,.92);background:rgba(255,255,255,.05);border:1px solid rgba(176,137,73,.28);padding:.9em 1.3em;border-radius:12px}
+.offer-list .ol-t{display:block;line-height:1.85}
+.offer-list svg{width:20px;height:20px;color:var(--gold-bright);flex:none;margin-top:4px}
 .offer-list strong{color:#fff}
 .offer-kind{text-align:center;font-size:.82rem;font-weight:700;letter-spacing:.08em;color:var(--gold-bright);margin:-6px 0 18px}
-.offer-dates{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:22px auto 0;font-size:.95rem;font-weight:700}
-.offer-dates span{font-size:.7rem;letter-spacing:.14em;font-weight:800;color:#23170a;background:var(--grad-gold);border-radius:999px;padding:4px 12px}
+.offer-dates{margin:28px auto 0;text-align:center}
+.od-label{display:inline-block;font-size:.7rem;letter-spacing:.14em;font-weight:800;color:#23170a;background:var(--grad-gold);border-radius:999px;padding:4px 14px;margin-bottom:12px}
+.od-items{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.od-item{display:flex;flex-direction:column;gap:2px;min-width:190px;background:rgba(255,255,255,.06);border:1px solid rgba(176,137,73,.4);border-radius:14px;padding:14px 22px;font-size:.85rem;color:rgba(255,255,255,.75)}
+.od-item b{font-family:var(--serif);font-size:1.14rem;color:#fff}
 .offer-cta{display:flex;flex-direction:column;align-items:center;gap:14px}
 .offer-fine{font-size:.8rem;color:rgba(255,255,255,.6)}
 
@@ -1913,12 +1918,18 @@ strong{font-weight:700}
       <p class="offer-kind">無料セミナー体験会｜オンライン開催・参加無料</p>
       <p class="offer-lead">このページでお伝えしてきたことを、実際にご覧いただく60分です。<br />私たちの活動を、ぜひ一度体験してください。</p>
       <ul class="offer-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>税理士の実務が<strong>AIで変わる瞬間</strong>を、ライブ実演でご覧いただけます</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>AIの最新動向を、<strong>税理士に関係のあること</strong>に絞ってお届けします</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>学び方・ツール・サポートなど、<strong>サロンの中身</strong>をまるごとご紹介します</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>初めての方も大丈夫。<strong>ご自身の現在地と、次の一歩</strong>が見えて帰れます</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg><span class="ol-t">税理士の実務が<strong>AIで変わる瞬間</strong>を、ライブ実演でご覧いただけます</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg><span class="ol-t">AIの最新動向を、<strong>税理士に関係のあること</strong>に絞ってお届けします</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg><span class="ol-t">学び方・ツール・サポートなど、<strong>サロンの中身</strong>をまるごとご紹介します</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg><span class="ol-t">初めての方も大丈夫。<strong>ご自身の現在地と、次の一歩</strong>が見えて帰れます</span></li>
       </ul>
-      <p class="offer-dates"><span>開催日程</span>7月23日（木）／ 8月10日（月）　いずれも 18:00〜19:00</p>
+      <div class="offer-dates reveal">
+        <span class="od-label">開催日程</span>
+        <div class="od-items">
+          <span class="od-item"><b>7月23日（木）</b>18:00〜19:00</span>
+          <span class="od-item"><b>8月10日（月）</b>18:00〜19:00</span>
+        </div>
+      </div>
       <div class="offer-cta">
         <a href="#" class="btn btn-gold btn-lg" id="applyBtn">
           無料セミナー体験会に申し込む
