@@ -508,9 +508,9 @@ strong{font-weight:700}
 .sd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .sd-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(12,27,48,.06);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s}
 .sd-card:hover{transform:translateY(-4px);border-color:rgba(176,137,73,.45);box-shadow:var(--shadow)}
-.sd-visual{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#eef2f8,#e2e9f2);display:grid;place-items:center;border-bottom:1px solid var(--line);padding:16px}
+.sd-visual{position:relative;margin:0;background:linear-gradient(135deg,#eef2f8,#e2e9f2);border-bottom:1px solid var(--line);padding:16px}
 .sd-imgnote{position:absolute;right:8px;bottom:6px;font-size:.62rem;letter-spacing:.04em;color:#fff;background:rgba(23,46,77,.6);padding:2px 9px;border-radius:8px;pointer-events:none}
-.sd-visual img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;border-radius:8px;border:1px solid rgba(12,27,48,.08);box-shadow:0 10px 28px rgba(12,27,48,.16)}
+.sd-visual img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid rgba(12,27,48,.08);box-shadow:0 10px 28px rgba(12,27,48,.16)}
 .sd-ph{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--gold)}
 .sd-ph svg{width:40px;height:40px}
 .sd-ph i{font-style:normal;font-size:.68rem;letter-spacing:.1em;color:var(--muted-2)}
@@ -1372,7 +1372,7 @@ strong{font-weight:700}
       </header>
       <div class="sd-grid">
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/seminar-live.png" alt="AI実用セミナーのイメージ：ライブ実演とチャットでの質疑応答" loading="lazy" /><span class="sd-imgnote">※画面はイメージです</span></figure>
+          <figure class="sd-visual"><img src="assets/seminar-live.png" alt="AI実用セミナーのイメージ：ライブ実演とチャットでの質疑応答" loading="lazy" /><span class="sd-imgnote">※画面はイメージです</span></figure>
           <div class="sd-txt">
             <p class="sd-name">毎月のライブ実演で学ぶ</p>
             <h4>AI実用セミナー（月1回・90分）</h4>
@@ -1414,7 +1414,7 @@ strong{font-weight:700}
           </div>
         </article>
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/ainews-slack.png" alt="最新AIニュース配信のSlack画面：事務局が要約と実務への視点を添えて最新AI情報を配信" loading="lazy" /></figure>
+          <figure class="sd-visual"><img src="assets/ainews-slack.png" alt="最新AIニュース配信のSlack画面：事務局が要約と実務への視点を添えて最新AI情報を配信" loading="lazy" /></figure>
           <div class="sd-txt">
             <p class="sd-name">追わなくても、最新AI情報が届く</p>
             <h4>最新AIニュース配信（Slack）</h4>
@@ -1480,7 +1480,7 @@ strong{font-weight:700}
           </div>
         </article>
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/prompts-copy.png" alt="実務プロンプト集の実際の画面：コピーボタンつきの役員報酬シミュレーションプロンプト" loading="lazy" /></figure>
+          <figure class="sd-visual"><img src="assets/prompts-copy.png" alt="実務プロンプト集の実際の画面：コピーボタンつきの役員報酬シミュレーションプロンプト" loading="lazy" /></figure>
           <div class="sd-txt">
             <p class="sd-name">コピペで今日から実務に使う</p>
             <h4>実務プロンプト集（30種以上）</h4>
@@ -1517,7 +1517,7 @@ strong{font-weight:700}
           </div>
         </article>
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/followup-archive.png" alt="フォローアップ会のアーカイブ動画一覧" loading="lazy" /></figure>
+          <figure class="sd-visual"><img src="assets/followup-archive.png" alt="フォローアップ会のアーカイブ動画一覧" loading="lazy" /></figure>
           <div class="sd-txt">
             <p class="sd-name">遅れても、何度でも追いつける</p>
             <h4>フォローアップ会</h4>
@@ -1531,7 +1531,7 @@ strong{font-weight:700}
           </div>
         </article>
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/zadankai-banner.png" alt="税理士AI座談会 第1回（2026年7月2日開催）：会員様が主役。先生同士だからこそ見えた、AI活用のリアル" loading="lazy" /></figure>
+          <figure class="sd-visual"><img src="assets/zadankai-banner.png" alt="税理士AI座談会 第1回（2026年7月2日開催）：会員様が主役。先生同士だからこそ見えた、AI活用のリアル" loading="lazy" /></figure>
           <div class="sd-txt">
             <p class="sd-name">仲間と本音で語り合う</p>
             <h4>税理士AI座談会（月1回・会員が主役）</h4>
@@ -1545,7 +1545,7 @@ strong{font-weight:700}
           </div>
         </article>
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/slack-community.png" alt="Slackコミュニティのイメージ：相談室チャンネルでの質問と知見共有" loading="lazy" /><span class="sd-imgnote">※画面はイメージです</span></figure>
+          <figure class="sd-visual"><img src="assets/slack-community.png" alt="Slackコミュニティのイメージ：相談室チャンネルでの質問と知見共有" loading="lazy" /><span class="sd-imgnote">※画面はイメージです</span></figure>
           <div class="sd-txt">
             <p class="sd-name">いつでも質問・知見が集まる</p>
             <h4>Slackコミュニティ</h4>
@@ -1568,7 +1568,7 @@ strong{font-weight:700}
       </header>
       <div class="sd-grid">
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/workshift-seminar.png" alt="ワークシフト講座 実際のセミナーバナー（税理士のための最強リストマーケティング＆公式LINE実践セミナー）" loading="lazy" /></figure>
+          <figure class="sd-visual"><img src="assets/workshift-seminar.png" alt="ワークシフト講座 実際のセミナーバナー（税理士のための最強リストマーケティング＆公式LINE実践セミナー）" loading="lazy" /></figure>
           <div class="sd-txt">
             <p class="sd-name">収益化の方法を、毎月学ぶ</p>
             <h4>ワークシフト講座（月1回・60分）</h4>
@@ -1582,7 +1582,7 @@ strong{font-weight:700}
           </div>
         </article>
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/aix-package.png" alt="顧問先提案商品の例：次世代型AI研修プラットフォーム カクヤクAIX／ウリアゲAIX" loading="lazy" /></figure>
+          <figure class="sd-visual"><img src="assets/aix-package.png" alt="顧問先提案商品の例：次世代型AI研修プラットフォーム カクヤクAIX／ウリアゲAIX" loading="lazy" /></figure>
           <div class="sd-txt">
             <p class="sd-name">顧問先に売れる「商品」を持つ</p>
             <h4>顧問先提案商品（今後拡充）</h4>
@@ -1596,7 +1596,7 @@ strong{font-weight:700}
           </div>
         </article>
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/marketing-line.png" alt="ワークシフト講座の実際の画面：公式LINEアカウント設定の実演解説" loading="lazy" /></figure>
+          <figure class="sd-visual"><img src="assets/marketing-line.png" alt="ワークシフト講座の実際の画面：公式LINEアカウント設定の実演解説" loading="lazy" /></figure>
           <div class="sd-txt">
             <p class="sd-name">価値を届ける仕組みをつくる</p>
             <h4>マーケティング支援（公式LINE・LPなど）</h4>
@@ -1610,7 +1610,7 @@ strong{font-weight:700}
           </div>
         </article>
         <article class="sd-card reveal">
-          <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/promo-gallery.png" alt="販促コンテンツギャラリー：カテゴリ別に17種の販促用コンテンツ" loading="lazy" /></figure>
+          <figure class="sd-visual"><img src="assets/promo-gallery.png" alt="販促コンテンツギャラリー：カテゴリ別に17種の販促用コンテンツ" loading="lazy" /></figure>
           <div class="sd-txt">
             <p class="sd-name">販促物は、サロンが用意</p>
             <h4>販促ツール支援（提案資料・掲載コンテンツ）</h4>
