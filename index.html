@@ -667,6 +667,7 @@ strong{font-weight:700}
 .price-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px}
 .price-list li{display:flex;align-items:center;gap:13px;font-size:.97rem;color:rgba(255,255,255,.92)}
 .price-list li::before{content:"\2713";flex:none;width:25px;height:25px;border-radius:50%;background:var(--grad-gold);color:#23170a;display:grid;place-items:center;font-size:.82rem;font-weight:900}
+.price-value{position:relative;z-index:1;text-align:center;margin-top:28px;font-family:var(--serif);font-size:1.04rem;color:var(--ink);line-height:2}
 .price-foot{text-align:center;font-size:.8rem;color:var(--muted);margin:18px auto 0;max-width:1000px}
 @media (max-width:760px){.price-main{grid-template-columns:1fr}.price-left{border-right:none;border-bottom:1px solid rgba(176,137,73,.25)}.pn-num{font-size:3.3rem}.price-left,.price-right{padding:32px 26px}}
 .offer{background:var(--bg);padding:90px 0}
@@ -1843,17 +1844,17 @@ strong{font-weight:700}
     <div class="section-head reveal">
       <p class="section-eyebrow">PRICE</p>
       <h2 class="section-title">これだけ揃って、<span class="em">月３万円</span>。</h2>
-      <p class="section-sub">通常なら<strong>月３０万円相当</strong>のコンサルティング内容。<br class="pc-only" />税理士ワークシフトサロンなら<strong>月額３万円</strong>、さらに<strong>初月は無料</strong>で始められます。</p>
+      <p class="section-sub">セミナー、ツール、ナレッジ、仲間——すべて込みで<strong>月額３万円</strong>（税込）。<br class="pc-only" /><strong>１日あたり約１,０００円</strong>。いつでも退会できます。</p>
     </div>
     <div class="price-card reveal">
       <div class="price-glow" aria-hidden="true"></div>
       <div class="price-main">
         <div class="price-left">
-          <span class="price-badge">初月トライアル 無料</span>
-          <div class="price-compare">通常 <s>月３０万円</s> 相当のコンサルティング</div>
+          <span class="price-badge">入会も退会も、いつでもOK</span>
+          <div class="price-compare">１日あたり 約１,０００円</div>
           <div class="price-now"><span class="pn-unit">月額</span><span class="pn-num">30,000</span><span class="pn-yen">円</span><span class="pn-tax">（税込）</span></div>
-          <p class="price-note">いつでも退会OK ／ オンライン完結 ／ 初月０円</p>
-          <a href="#cta" class="btn btn-gold btn-lg">初月無料で参加する <span class="btn-arrow">→</span></a>
+          <p class="price-note">いつでも退会OK ／ オンライン完結 ／ 追加費用なし</p>
+          <a href="#cta" class="btn btn-gold btn-lg">まずは無料トライアルで体感する <span class="btn-arrow">→</span></a>
         </div>
         <div class="price-right">
           <p class="price-incl-h">これだけ入って、月３万円。</p>
@@ -1870,6 +1871,7 @@ strong{font-weight:700}
         </div>
       </div>
     </div>
+    <p class="price-value reveal">参加者の声にもある、「１時間の作業が、約15分に」。<br class="pc-only" />——生まれる時間の価値は、先生ご自身の時間単価で計算してみてください。</p>
     <p class="price-foot reveal">※ 表示価格は税込。最新のプラン内容・特典は無料トライアルにてご案内します。</p>
   </div>
 </section>
