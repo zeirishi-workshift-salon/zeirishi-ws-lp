@@ -800,7 +800,8 @@ strong{font-weight:700}
   .gd-ic{display:none}
   .gd-num{width:38px;height:38px;font-size:1rem}
   .gd-step::before{left:19px}
-  .mo-steps{grid-template-columns:1fr}
+  .mo-steps{grid-template-columns:1fr;gap:38px}
+  .mo-step:not(:last-of-type)::after{display:grid!important;top:auto;right:auto;bottom:-36px;left:50%;transform:translateX(-50%) rotate(90deg)}
   .mo-own-grid{grid-template-columns:1fr}
   .chart-card{padding:30px 22px}
   .bar-row{grid-template-columns:96px 1fr;gap:12px}
