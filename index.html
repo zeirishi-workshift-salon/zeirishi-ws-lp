@@ -696,16 +696,17 @@ strong{font-weight:700}
 .offer-title{font-family:var(--serif);font-weight:900;font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:22px}
 .offer-lead{color:rgba(255,255,255,.82);font-size:1.02rem;margin-bottom:34px;line-height:1.95}
 .offer-list{list-style:none;margin:0 auto 36px;padding:0;max-width:540px;text-align:left;display:flex;flex-direction:column;gap:12px}
-.offer-list li{display:flex;align-items:flex-start;gap:12px;font-size:.96rem;color:rgba(255,255,255,.92);background:rgba(255,255,255,.05);border:1px solid rgba(176,137,73,.28);padding:.9em 1.3em;border-radius:12px}
+.offer-list li{display:flex;align-items:flex-start;gap:12px;font-size:.96rem;color:var(--ink);background:#fff;border:1px solid rgba(176,137,73,.25);box-shadow:0 10px 26px rgba(0,0,0,.28);padding:1em 1.3em;border-radius:12px}
 .offer-list .ol-t{display:block;line-height:1.85}
-.offer-list svg{width:20px;height:20px;color:var(--gold-bright);flex:none;margin-top:4px}
-.offer-list strong{color:#fff}
+.offer-list svg{width:20px;height:20px;color:var(--gold-deep);flex:none;margin-top:4px}
+.offer-list strong{color:var(--gold-deep)}
+.offer-title .em{color:var(--gold-bright);font-style:normal}
 .offer-kind{text-align:center;font-size:.82rem;font-weight:700;letter-spacing:.08em;color:var(--gold-bright);margin:-6px 0 18px}
 .offer-dates{margin:28px auto 0;text-align:center}
-.od-label{display:inline-block;font-size:.7rem;letter-spacing:.14em;font-weight:800;color:#23170a;background:var(--grad-gold);border-radius:999px;padding:4px 14px;margin-bottom:12px}
+.od-label{display:inline-block;font-size:.7rem;letter-spacing:.14em;font-weight:800;color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:4px 14px;margin-bottom:12px}
 .od-items{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.od-item{display:flex;flex-direction:column;gap:2px;min-width:190px;background:rgba(255,255,255,.06);border:1px solid rgba(176,137,73,.4);border-radius:14px;padding:14px 22px;font-size:.85rem;color:rgba(255,255,255,.75)}
-.od-item b{font-family:var(--serif);font-size:1.14rem;color:#fff}
+.od-item{display:flex;flex-direction:column;gap:2px;min-width:190px;background:var(--grad-gold);border:none;border-radius:14px;padding:14px 22px;font-size:.85rem;font-weight:700;color:rgba(35,23,10,.8);box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.od-item b{font-family:var(--serif);font-size:1.18rem;color:#23170a}
 .offer-cta{display:flex;flex-direction:column;align-items:center;gap:14px}
 .offer-fine{font-size:.8rem;color:rgba(255,255,255,.6)}
 
@@ -1914,7 +1915,7 @@ strong{font-weight:700}
     <div class="offer-card reveal">
       <div class="offer-glow" aria-hidden="true"></div>
       <p class="offer-eyebrow">まずは“無料”で、その効果を体感してください</p>
-      <h2 class="offer-title">税理士の実務が、AIで動く60分。</h2>
+      <h2 class="offer-title">税理士の実務が、<span class="em">AIで動く60分</span>。</h2>
       <p class="offer-kind">無料セミナー体験会｜オンライン開催・参加無料</p>
       <p class="offer-lead">このページでお伝えしてきたことを、実際にご覧いただく60分です。<br />私たちの活動を、ぜひ一度体験してください。</p>
       <ul class="offer-list">
