@@ -504,16 +504,16 @@ strong{font-weight:700}
 .sd-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .sd-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(12,27,48,.06);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s}
 .sd-card:hover{transform:translateY(-4px);border-color:rgba(176,137,73,.45);box-shadow:var(--shadow)}
-.sd-visual{position:relative;aspect-ratio:16/7;background:linear-gradient(135deg,#f0f3f8,#e4eaf2);display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.sd-visual{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#eef2f8,#e2e9f2);display:grid;place-items:center;border-bottom:1px solid var(--line);padding:16px}
 .sd-imgnote{position:absolute;right:8px;bottom:6px;font-size:.62rem;letter-spacing:.04em;color:#fff;background:rgba(23,46,77,.6);padding:2px 9px;border-radius:8px;pointer-events:none}
-.sd-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.sd-visual img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;border-radius:8px;border:1px solid rgba(12,27,48,.08);box-shadow:0 10px 28px rgba(12,27,48,.16)}
 .sd-ph{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--gold)}
 .sd-ph svg{width:40px;height:40px}
 .sd-ph i{font-style:normal;font-size:.68rem;letter-spacing:.1em;color:var(--muted-2)}
 .sd-txt{padding:20px 22px 22px}
-.sd-txt h4{font-family:var(--serif);font-size:1.08rem;color:var(--ink);line-height:1.5}
+.sd-txt h4{font-family:var(--serif);font-size:1.24rem;font-weight:700;color:var(--ink);line-height:1.5;margin-bottom:10px}
 .sd-txt h4 .badge-new{display:inline-block;vertical-align:2px;font-size:.6rem;font-weight:900;letter-spacing:.08em;color:#23170a;background:var(--grad-gold);border-radius:6px;padding:2px 7px;margin-left:6px}
-.sd-name{font-size:.74rem;color:var(--muted-2);margin:2px 0 10px}
+.sd-name{font-size:.75rem;font-weight:800;letter-spacing:.05em;color:var(--gold-deep);margin:0 0 6px}
 .sd-prodlogo{height:36px;width:auto;display:block;margin:0 0 10px}
 .sd-lead{font-size:.85rem;color:var(--muted);line-height:1.85;margin-bottom:10px}
 .sd-txt ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
@@ -1369,8 +1369,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/seminar-live.png" alt="AI実用セミナーのイメージ：ライブ実演とチャットでの質疑応答" loading="lazy" /><span class="sd-imgnote">※画面はイメージです</span></figure>
           <div class="sd-txt">
-            <h4>AI実用セミナー（月1回・90分）</h4>
             <p class="sd-name">毎月のライブ実演で学ぶ</p>
+            <h4>AI実用セミナー（月1回・90分）</h4>
             <p class="sd-lead">「見て終わり」にしない、実演型のライブセミナー。最新のAI動向から実務での使い方まで、その場で手を動かしながら習得します。</p>
             <ul>
               <li>参加者も一緒に手を動かす実演ワーク</li>
@@ -1383,8 +1383,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual"><img src="assets/bakeru-quests.png" alt="バケるAIの画面：初級コースのクエスト一覧。1回数分のクエストをクリアしながら学べる" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>クエスト式AI研修ツール「バケるAI」<span class="badge-new">NEW</span></h4>
             <p class="sd-name">ゲーム感覚で基礎を固める</p>
+            <h4>クエスト式AI研修ツール「バケるAI」<span class="badge-new">NEW</span></h4>
             <p class="sd-lead">1回数分の「クエスト」をクリアしながら、AIの基礎を自分のペースで身につけられる自主学習ツールです。</p>
             <ul>
               <li>1回数分のクエスト形式。多忙でも続けられる</li>
@@ -1397,8 +1397,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual"><img src="assets/video-library.png" alt="解説動画ライブラリ：セミナーアーカイブや実務活用ガイドなど60本以上の動画がサムネイルで並ぶ" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>解説動画ライブラリ（毎月続々追加）</h4>
             <p class="sd-name">60本以上の動画で、いつでも学ぶ</p>
+            <h4>解説動画ライブラリ（毎月続々追加）</h4>
             <p class="sd-lead">初期設定から実務活用まで、60本以上の解説動画をいつでも視聴。AIの進化に合わせて、毎月新作が加わります。</p>
             <ul>
               <li>初期設定〜応用まで体系化された60本以上のストック</li>
@@ -1411,8 +1411,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/ainews-slack.png" alt="最新AIニュース配信のSlack画面：事務局が要約と実務への視点を添えて最新AI情報を配信" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>最新AIニュース配信（Slack）</h4>
             <p class="sd-name">追わなくても、最新AI情報が届く</p>
+            <h4>最新AIニュース配信（Slack）</h4>
             <p class="sd-lead">事務局が最新AI情報を厳選し、「実務にどう効くか」まで要約してSlackにお届けします。</p>
             <ul>
               <li>要約＋「実務への活かし方」の視点つき</li>
@@ -1434,8 +1434,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual"><img src="assets/shiwakenin-upload.png" alt="AI必殺仕訳人の画面：スマホで撮影したレシート動画をアップロードするだけで仕訳データを自動作成" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>AI必殺仕訳人（追加費用なし・無制限利用可能）</h4>
             <p class="sd-name">仕訳はAIに任せて、最大80%時短</p>
+            <h4>AI必殺仕訳人（追加費用なし・無制限利用可能）</h4>
             <img class="sd-prodlogo" src="assets/shiwakenin-logo.png" alt="AI必殺仕訳人 ロゴ" loading="lazy" />
             <p class="sd-lead">レシートを撮って、アップロードするだけ。AIが勘定科目・金額・税区分を自動判定する、当サロン独自開発の仕訳専用システムです。</p>
             <ul>
@@ -1449,8 +1449,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual"><img src="assets/kinoshitakun-slack.png" alt="AIキノシタくんのSlack画面：相続税・贈与税・譲渡所得税等の専門アシスタント。1対1のDMで安心して相談できる" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>AIキノシタくん（Slack内アプリ追加）</h4>
             <p class="sd-name">税務の疑問は24時間、AIに相談</p>
+            <h4>AIキノシタくん（Slack内アプリ追加）</h4>
             <p class="sd-lead">相続専門税理士・木下勇人の知見を学習した、税務実務専用のAIアシスタント。木下先生に相談する感覚でSlackから質問できます。</p>
             <ul>
               <li>相続税・贈与税・譲渡所得税等の実務判断に特化</li>
@@ -1463,8 +1463,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual"><img src="assets/knowledge-recipes.png" alt="AIナレッジの画面：記帳・経費の自動化など、業務別の手順書が削減時間の目安つきで並ぶ" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>AIナレッジ（業務別のAI活用手順書）</h4>
             <p class="sd-name">手順書どおりに、具体的な業務を時短</p>
+            <h4>AIナレッジ（業務別のAI活用手順書）</h4>
             <p class="sd-lead">「Gmailの請求書を自動保存」「相続税の土地評価を自動収集」——税理士の業務別に、真似するだけのAI活用手順書を用意しました。</p>
             <ul>
               <li>記帳・顧問先対応・相続税業務など6カテゴリを網羅</li>
@@ -1477,8 +1477,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/prompts-copy.png" alt="実務プロンプト集の実際の画面：コピーボタンつきの役員報酬シミュレーションプロンプト" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>実務プロンプト集（30種以上）</h4>
             <p class="sd-name">コピペで今日から実務に使う</p>
+            <h4>実務プロンプト集（30種以上）</h4>
             <p class="sd-lead">コピーして貼り付けるだけで、AIが税理士の実務を手伝ってくれる。厳選された30種以上の実務プロンプト集です。</p>
             <ul>
               <li>税理士業務の場面別に設計。相続税関連が特に充実</li>
@@ -1500,8 +1500,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual"><img src="assets/tensaku-slack.png" alt="課題添削のSlack画面：会員の提出課題に講師が一人ひとり丁寧なフィードバックを返信" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>予習・実践課題</h4>
             <p class="sd-name">課題は講師が一人ひとり添削</p>
+            <h4>予習・実践課題</h4>
             <p class="sd-lead">セミナーは「出て終わり」にしません。事前準備から課題の個別添削まで、学びを実務に定着させる仕組みがあります。</p>
             <ul>
               <li>セミナーテーマを事前共有。関連教材で準備して臨める</li>
@@ -1514,8 +1514,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/followup-archive.png" alt="フォローアップ会のアーカイブ動画一覧" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>フォローアップ会</h4>
             <p class="sd-name">遅れても、何度でも追いつける</p>
+            <h4>フォローアップ会</h4>
             <p class="sd-lead">「参加できなかった」「ついていけなかった」を、そのままにしない。セミナーと同じ内容を、つまずきやすい箇所に絞って丁寧にもう一度お届けします。</p>
             <ul>
               <li>つまずきやすい箇所は、一緒にワークを進める</li>
@@ -1528,8 +1528,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/zadankai-banner.png" alt="税理士AI座談会 第1回（2026年7月2日開催）：会員様が主役。先生同士だからこそ見えた、AI活用のリアル" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>税理士AI座談会（月1回・会員が主役）</h4>
             <p class="sd-name">仲間と本音で語り合う</p>
+            <h4>税理士AI座談会（月1回・会員が主役）</h4>
             <p class="sd-lead">講師が教える場ではなく、先生方が語り合う場。同じ立場の税理士同士だから話せる、リアルな導入事例と本音の相談があります。</p>
             <ul>
               <li>進行役は、AI活用が進んでいる会員の税理士</li>
@@ -1542,8 +1542,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/slack-community.png" alt="Slackコミュニティのイメージ：相談室チャンネルでの質問と知見共有" loading="lazy" /><span class="sd-imgnote">※画面はイメージです</span></figure>
           <div class="sd-txt">
-            <h4>Slackコミュニティ</h4>
             <p class="sd-name">いつでも質問・知見が集まる</p>
+            <h4>Slackコミュニティ</h4>
             <p class="sd-lead">「こんなこと聞いていいのかな」も、大歓迎。いつでも質問できて、仲間の知見が日々集まる——サロンの日常が流れる場所です。</p>
             <ul>
               <li>相談室でいつでも質問。事務局・講師が個別に対応</li>
@@ -1565,8 +1565,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/workshift-seminar.png" alt="ワークシフト講座 実際のセミナーバナー（税理士のための最強リストマーケティング＆公式LINE実践セミナー）" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>ワークシフト講座（月1回・60分）</h4>
             <p class="sd-name">収益化の方法を、毎月学ぶ</p>
+            <h4>ワークシフト講座（月1回・60分）</h4>
             <p class="sd-lead">効率化で生まれた時間を、収益に変える。顧問先に「選ばれ続ける税理士」になるための月次講座です。</p>
             <ul>
               <li>マーケティング・営業・人脈構築の基礎から段階的に</li>
@@ -1579,8 +1579,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/aix-package.png" alt="顧問先提案商品の例：次世代型AI研修プラットフォーム カクヤクAIX／ウリアゲAIX" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>顧問先提案商品（今後拡充）</h4>
             <p class="sd-name">顧問先に売れる「商品」を持つ</p>
+            <h4>顧問先提案商品（今後拡充）</h4>
             <p class="sd-lead">学ぶだけでは、収益は変わりません。顧問先にそのまま提案できる「商品」をサロンが用意し、先生の新たな収益源をつくります。</p>
             <ul>
               <li>例：助成金を活用したAI研修パッケージ</li>
@@ -1593,8 +1593,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/marketing-line.png" alt="ワークシフト講座の実際の画面：公式LINEアカウント設定の実演解説" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>マーケティング支援（公式LINE・LPなど）</h4>
             <p class="sd-name">価値を届ける仕組みをつくる</p>
+            <h4>マーケティング支援（公式LINE・LPなど）</h4>
             <p class="sd-lead">新たな収益をつくるには、価値を「届ける力」が必要です。多くの先生が苦手とするマーケティングを、手法の講義から実装まで丁寧に支援します。</p>
             <ul>
               <li>公式LINE・LPの開設から運用まで丁寧に案内</li>
@@ -1607,8 +1607,8 @@ strong{font-weight:700}
         <article class="sd-card reveal">
           <figure class="sd-visual" style="aspect-ratio:16/9"><img src="assets/promo-gallery.png" alt="販促コンテンツギャラリー：カテゴリ別に17種の販促用コンテンツ" loading="lazy" /></figure>
           <div class="sd-txt">
-            <h4>販促ツール支援（提案資料・掲載コンテンツ）</h4>
             <p class="sd-name">販促物は、サロンが用意</p>
+            <h4>販促ツール支援（提案資料・掲載コンテンツ）</h4>
             <p class="sd-lead">スキルも経験もなくても、今日から提案を始められる。営業資料から発信用コンテンツまで、必要な販促ツールを揃えてお渡しします。</p>
             <ul>
               <li>顧問先提案商品の販促資料をサロンが用意</li>
