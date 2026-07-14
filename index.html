@@ -661,6 +661,12 @@ strong{font-weight:700}
 .pn-num{font-size:4.2rem;font-weight:900;line-height:.95;background:var(--grad-gold-text);-webkit-background-clip:text;background-clip:text;color:transparent}
 .pn-yen{font-size:1.5rem;font-weight:700;color:#fff}
 .pn-tax{font-size:.78rem;color:rgba(255,255,255,.6);margin-left:.4em;font-family:var(--sans)}
+.price-sat{display:flex;align-items:center;gap:8px;margin:14px 0 2px}
+.price-sat svg{width:20px;height:20px;color:var(--gold-bright);flex:none}
+.price-sat b{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--gold-bright);line-height:1}
+.price-sat .ps-base{font-size:.9rem;color:rgba(255,255,255,.7);margin-right:6px}
+.price-sat .ps-label{font-size:.78rem;font-weight:700;color:rgba(255,255,255,.85);line-height:1.5}
+.price-sat .ps-label small{display:block;font-size:.68rem;font-weight:500;color:rgba(255,255,255,.55)}
 .price-note{font-size:.82rem;color:rgba(255,255,255,.6)}
 .price-left .btn{margin-top:10px}
 .price-right{padding:46px 44px;background:rgba(0,0,0,.18)}
@@ -1855,6 +1861,7 @@ strong{font-weight:700}
           <span class="price-badge">すべて込みの月額制</span>
           <div class="price-compare">１日あたり １,１００円</div>
           <div class="price-now"><span class="pn-unit">月額</span><span class="pn-num">33,000</span><span class="pn-yen">円</span><span class="pn-tax">（税込）</span></div>
+          <div class="price-sat"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><b>4.3</b><span class="ps-base">／5</span><span class="ps-label">会員アンケート満足度<small>（直近5イベントの平均・回答71件）</small></span></div>
           <p class="price-note">いつでも退会OK ／ オンライン完結 ／ 追加費用なし</p>
           <a href="#cta" class="btn btn-gold btn-lg">まずは無料セミナー体験会に参加する <span class="btn-arrow">→</span></a>
         </div>
