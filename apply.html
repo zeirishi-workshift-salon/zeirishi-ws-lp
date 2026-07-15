@@ -220,7 +220,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
             <span class="flabel">ご参加人数<span class="req">必須</span></span>
             <div class="choice-grid cols2">
               <label class="choice"><input type="radio" name="party" value="ご本人のみ" required /><b>ご本人のみ</b></label>
-              <label class="choice"><input type="radio" name="party" value="お知り合いとご一緒" /><b>お知り合いとご一緒に参加</b></label>
+              <label class="choice"><input type="radio" name="party" value="お知り合いとご一緒" /><span><b>お知り合いとご一緒に参加</b><small>選ぶと、お名前の記入欄が表示されます</small></span></label>
             </div>
             <div id="companion-block">
               <div class="frow">
@@ -232,7 +232,7 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
                 </select>
               </div>
               <div class="frow" style="margin-bottom:0">
-                <label for="companions">ご一緒に参加される方のお名前</label>
+                <label for="companions">ご一緒に参加される方のお名前<span class="req">必須</span></label>
                 <textarea name="companions" id="companions" placeholder="お一人ずつ改行してご記入ください（例：山田太郎）"></textarea>
                 <p class="fhint">当日のご案内メールは、お申込みいただいたメールアドレス宛にまとめてお送りします。</p>
               </div>
@@ -336,11 +336,17 @@ form.addEventListener("submit", function(ev){
   var email = document.getElementById("email");
   var email2 = document.getElementById("email2");
   email2.setCustomValidity(email.value.trim() !== email2.value.trim() ? "メールアドレスが一致しません" : "");
+
+  /* 同伴選択時は同席者名を必須にする */
+  var partyTogether = document.querySelector('input[name="party"][value="お知り合いとご一緒"]');
+  var companions = document.getElementById("companions");
+  companions.setCustomValidity(partyTogether.checked && !companions.value.trim() ? "ご一緒に参加される方のお名前をご記入ください" : "");
   if (!form.checkValidity()){
     var bad = form.querySelector("input:invalid, select:invalid, textarea:invalid");
     var msg = "未入力の必須項目があります。ご確認ください。";
     if (bad === email2 && email2.validationMessage.indexOf("一致") !== -1) msg = "メールアドレス（確認用）が一致しません。";
     if (bad === document.getElementById("consent")) msg = "個人情報の取り扱いへの同意をお願いします。";
+    if (bad === document.getElementById("companions")) msg = "ご一緒に参加される方のお名前をご記入ください。";
     errMsg.textContent = msg;
     errMsg.classList.add("show");
     bad.scrollIntoView({behavior:"smooth", block:"center"});
