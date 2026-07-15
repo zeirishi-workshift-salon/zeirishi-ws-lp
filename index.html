@@ -536,6 +536,15 @@ strong{font-weight:700}
 .sd-txt li{font-size:.8rem;color:var(--muted);line-height:1.7;padding-left:16px;position:relative}
 .sd-txt li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .sd-close{margin-top:12px;font-size:.8rem;font-weight:700;color:var(--gold-deep);line-height:1.7}
+/* リアル交流会 特別カード */
+.offkai-card{grid-column:1/-1;flex-direction:row;border-color:rgba(176,137,73,.5);box-shadow:0 8px 28px rgba(140,104,46,.16)}
+.ok-plate{flex:0 0 36%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:linear-gradient(150deg,#0c1b30,#15314f);padding:30px 20px;text-align:center}
+.ok-kicker{font-size:.64rem;letter-spacing:.32em;font-weight:800;color:#d4ad63}
+.ok-date{font-family:var(--serif);font-size:2.3rem;font-weight:700;color:#fff;line-height:1}
+.ok-date small{display:block;font-size:.68rem;letter-spacing:.24em;font-family:var(--sans);font-weight:700;color:rgba(255,255,255,.6);margin-top:7px}
+.ok-time{font-size:.86rem;font-weight:700;color:rgba(255,255,255,.85)}
+.ok-first{font-size:.7rem;font-weight:800;letter-spacing:.12em;color:#23170a;background:var(--grad-gold);border-radius:999px;padding:5px 15px;margin-top:2px}
+@media(max-width:900px){.offkai-card{flex-direction:column}.ok-plate{flex:none;padding:26px 16px}}
 @media(max-width:900px){.sd-grid{grid-template-columns:1fr}
   .sd-block{padding:20px 14px 24px}}
 .eco-bands{margin-top:34px;display:flex;flex-direction:column;gap:14px}
@@ -1314,6 +1323,7 @@ strong{font-weight:700}
         <div class="svc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.8-6.5"/><path d="M3 4v5h5"/></svg>フォローアップ会で追いつく<span class="svc-meta">同内容をもう一度・丁寧に解説</span></div>
         <div class="svc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4.5-6.2"/></svg>座談会で本音を語り合う<span class="svc-meta">税理士AI座談会（月1回・会員が主役）</span></div>
         <div class="svc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 9h14M5 15h14M9.5 3l-2 18M16.5 3l-2 18"/></svg>Slackで仲間と情報交換する<span class="svc-meta">質問・知見共有はいつでも</span></div>
+        <div class="svc-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-6.5-4.9-6.5-9.5A6.5 6.5 0 0 1 12 5a6.5 6.5 0 0 1 6.5 6.5C18.5 16.1 12 21 12 21z"/><circle cx="12" cy="11.5" r="2.5"/></svg>リアル交流会で、直接会う<span class="badge-new">NEW</span><span class="svc-meta">第1回 2026年10月2日・東京（以降定期開催）</span></div>
         </div>
       </article>
       <article class="flow-card reveal" data-delay="4">
@@ -1342,7 +1352,7 @@ strong{font-weight:700}
       </div>
       <div class="eco-band">
         <span class="eb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4.5-6.2"/></svg></span>
-        <p><b>そして、このすべてを仲間と一緒に</b>一人で頑張らなくて大丈夫です。わからないことは仲間に聞けて、うまくいった日は一緒に喜べる。同じ道を歩む全国の税理士仲間と、あなたのペースで進んでいける場所です。</p>
+        <p><b>そして、このすべてを仲間と一緒に</b>一人で頑張らなくて大丈夫です。わからないことは仲間に聞けて、うまくいった日は一緒に喜べる。同じ道を歩む全国の税理士仲間と、あなたのペースで進んでいける場所です。2026年10月からはリアル交流会（オフ会）もスタート——画面越しの仲間と直接会える機会も、定期的に設けていきます。</p>
       </div>
     </div>
 
@@ -1571,7 +1581,7 @@ strong{font-weight:700}
             <ul>
               <li>進行役は、AI活用が進んでいる会員の税理士</li>
               <li>会員同士で課題と解決策を導き合う</li>
-              <li>リアルのオフ会も開催（第1回：2026年10月2日・東京）</li>
+              <li>オンライン開催。全国どこからでも参加できる</li>
             </ul>
             <p class="sd-close">同じ道を歩む仲間の一言が、次の一歩を軽くします。</p>
           </div>
@@ -1588,6 +1598,25 @@ strong{font-weight:700}
               <li>事務局からも最新情報・知見を日々配信</li>
             </ul>
             <p class="sd-close">一人の試行錯誤より、仲間全員の実践。学びの速度が違います。</p>
+          </div>
+        </article>
+        <article class="sd-card offkai-card reveal">
+          <div class="ok-plate" aria-hidden="true">
+            <span class="ok-kicker">REAL MEETUP</span>
+            <span class="ok-date">2026.10.2<small>FRIDAY・東京</small></span>
+            <span class="ok-time">18:30〜21:00</span>
+            <span class="ok-first">第1回、開催決定</span>
+          </div>
+          <div class="sd-txt">
+            <p class="sd-name">オンラインの仲間と、直接会える</p>
+            <h4>リアル交流会（オフ会）<span class="badge-new">NEW</span></h4>
+            <p class="sd-lead">画面越しに学び合ってきた全国の仲間と、同じテーブルを囲む。オンラインのサロンだからこそ、直接会える場を大切にしています。</p>
+            <ul>
+              <li>第1回は2026年10月2日（金）18:30〜21:00、東京で開催</li>
+              <li>全国の税理士仲間・講師陣と直接話せる</li>
+              <li>今後も定期開催を予定しています</li>
+            </ul>
+            <p class="sd-close">いまご入会いただくと、第1回にちょうど間に合います。</p>
           </div>
         </article>
       </div>
@@ -1994,6 +2023,10 @@ strong{font-weight:700}
       <details class="faq-item reveal">
         <summary>顧客や事務所の情報を、AIに入力しても大丈夫ですか？</summary>
         <div class="faq-body"><p>大切なご質問です。本サロンでは、入会ガイドの最初のステップで「入力内容をAIの学習に使わせない設定」からご案内しています。そのうえで、顧客名など個人を特定できる情報は入力しない運用を推奨。顧客から預かった情報や事務所独自の情報の取り扱いを含め、セキュリティの考え方はセミナーやSlackでも繰り返し取り上げています。</p></div>
+      </details>
+      <details class="faq-item reveal">
+        <summary>交流はオンラインだけですか？</summary>
+        <div class="faq-body"><p>日々の学びやサポートはオンライン中心ですが、リアル交流会（オフ会）も開催します。第1回は2026年10月2日（金）18:30〜21:00に東京で開催予定で、以降も定期的に実施していきます。全国の税理士仲間や講師陣と、直接お会いいただける機会です。</p></div>
       </details>
       <details class="faq-item reveal">
         <summary>料金やプランについて教えてください。</summary>
