@@ -737,6 +737,16 @@ strong{font-weight:700}
 .od-speaker{flex-direction:row;align-items:center;gap:14px;text-align:left}
 .od-speaker img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-bright);flex:none;box-shadow:0 4px 12px rgba(12,27,48,.25)}
 .od-speaker .ods-t{display:flex;flex-direction:column;gap:3px}
+/* 広い画面：登壇者写真を右の余白に大きく浮かべる（狭い画面ではチケット型のまま） */
+@media(min-width:1180px){
+  .od-speaker{position:absolute;right:64px;bottom:110px;z-index:1;flex-direction:column;align-items:center;gap:12px;background:transparent;border-top:none;box-shadow:none;padding:0;min-width:0}
+  .od-speaker:hover{transform:none;box-shadow:none}
+  .od-speaker img{width:150px;height:150px;border-width:3px;box-shadow:0 14px 34px rgba(0,0,0,.4)}
+  .od-speaker .ods-t{align-items:center;gap:2px}
+  .od-speaker .ods-t i{color:var(--gold-bright)}
+  .od-speaker .ods-t b{color:#fff;font-size:1.18rem}
+  .od-speaker .ods-t em{color:rgba(255,255,255,.78);font-size:.8rem}
+}
 .offer-cta{display:flex;flex-direction:column;align-items:center;gap:14px}
 .offer-fine{font-size:.8rem;color:rgba(255,255,255,.6)}
 
