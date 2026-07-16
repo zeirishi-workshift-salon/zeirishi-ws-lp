@@ -10,6 +10,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet" />
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '940320812416202');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=940320812416202&ev=PageView&noscript=1" alt="" /></noscript>
+<!-- End Meta Pixel Code -->
 <style>
 :root{
   --navy:#172e4d;--ink:#0c1b30;
@@ -382,6 +398,8 @@ form.addEventListener("submit", function(ev){
 
   fetch(GAS_URL, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain"}, body: JSON.stringify(data)})
     .then(function(){
+      /* 広告の成果計測：申込完了をMetaへ通知 */
+      if (typeof fbq === "function") { fbq("track", "Lead"); }
       document.getElementById("form-view").style.display = "none";
       document.getElementById("thanks").classList.add("show");
       window.scrollTo({top:0, behavior:"smooth"});
