@@ -98,6 +98,8 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 #companion-block.show{display:block}
 .consent-box{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:.8rem;color:var(--muted);margin-bottom:24px}
 .consent-box .choice{margin-top:10px;background:#fff}
+.pp-link{display:inline-block;margin-top:10px;font-size:.82rem;font-weight:700;color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+.pp-link:hover{color:var(--gold)}
 .submit-area{text-align:center}
 .btn-gold{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--sans);font-weight:700;font-size:1.06rem;color:#23170a;background:var(--grad-gold);border:none;border-radius:999px;padding:1.05em 2.6em;max-width:100%;line-height:1.45;cursor:pointer;box-shadow:0 14px 30px rgba(140,104,46,.4),inset 0 1px 0 rgba(255,255,255,.4);transition:transform .25s ease,box-shadow .25s ease;animation:ctaPulse 3.8s ease-in-out infinite}
 .btn-gold:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(140,104,46,.5)}
@@ -297,8 +299,9 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
         </fieldset>
 
         <div class="consent-box">
-          <b>個人情報の取り扱いについて</b><br />
-          ご入力いただいた情報は、本セミナーの運営・ご連絡、および税理士ワークシフトサロンからのご案内にのみ利用し、第三者に提供することはありません。
+          <b>個人情報の取り扱いについてご確認ください</b><br />
+          ご入力いただいた情報は、本セミナーの運営・ご連絡、および税理士ワークシフトサロンからのご案内に利用いたします。お取り扱いの詳細は、運営元である税理士法人レディングの個人情報保護方針をご確認ください。
+          <a class="pp-link" href="https://www.leding.or.jp/privacy/" target="_blank" rel="noopener noreferrer">税理士法人レディングの個人情報の取り扱いについて <span aria-hidden="true">↗</span></a>
           <label class="choice"><input type="checkbox" name="consent" id="consent" required /><b>同意する</b></label>
         </div>
 
