@@ -73,6 +73,16 @@ textarea{min-height:96px;resize:vertical}
 .choice b{font-weight:inherit}
 .choice small{display:block;font-size:.76rem;font-weight:500;color:var(--muted)}
 .choice .sc{font-size:.8rem;font-weight:700;line-height:1.35}
+.other-input{margin-top:10px}
+.join-cta{background:linear-gradient(180deg,#fdf9f1 0%,#fff 100%);border:1.5px solid var(--gold);border-radius:14px;padding:22px 18px 18px;margin-bottom:22px;box-shadow:0 8px 24px rgba(176,137,73,.14)}
+.join-cta .cta-head{font-family:var(--serif);font-weight:700;font-size:1.08rem;color:var(--ink);text-align:center}
+.join-cta .cta-sub{font-size:.82rem;color:var(--muted);text-align:center;margin:5px 0 16px;line-height:1.7}
+.choice.join-now{border-color:var(--gold);background:#fdf5e6}
+.choice.join-now:has(input:checked){border-color:var(--gold-deep);background:#f8ead0}
+.next-hint{display:none;align-items:center;gap:9px;margin-top:14px;font-size:.84rem;font-weight:600;color:#7a5a1f;background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:12px 14px;line-height:1.55}
+.next-hint.show{display:flex}
+.next-hint svg{width:20px;height:20px;flex:none;color:var(--gold-deep)}
+.next-hint b{color:var(--gold-deep)}
 
 #join-block{display:none;margin-top:14px;border-top:1px dashed var(--line-2);padding-top:26px}
 #join-block.show{display:block}
@@ -162,8 +172,9 @@ textarea{min-height:96px;resize:vertical}
               <label class="choice"><input type="checkbox" name="impressed" value="一人も置き去りにしないサポートサービス" /><b>一人も置き去りにしないサポートサービス</b></label>
               <label class="choice"><input type="checkbox" name="impressed" value="すぐ使えるもの（AIキノシタくん・AI必殺仕訳人・AIナレッジ）" /><b>すぐ使えるもの — AIキノシタくん・AI必殺仕訳人・AIナレッジ</b></label>
               <label class="choice"><input type="checkbox" name="impressed" value="ワークシフト（変化のその先へ）" /><b>ワークシフト — 変化のその先へ</b></label>
-              <label class="choice"><input type="checkbox" name="impressed" value="その他" /><b>その他</b></label>
+              <label class="choice"><input type="checkbox" name="impressed" value="その他" id="impressed_other_cb" /><b>その他</b></label>
             </div>
+            <input type="text" name="impressed_other" id="impressed_other" class="other-input" placeholder="その他の内容をご記入ください（任意）" style="display:none" />
           </div>
 
           <div class="frow">
@@ -172,24 +183,33 @@ textarea{min-height:96px;resize:vertical}
               <label class="choice"><input type="radio" name="ai" value="これから（ほぼ使ったことがない）" /><b>これから（ほぼ使ったことがない）</b></label>
               <label class="choice"><input type="radio" name="ai" value="ChatGPT等のチャット型は使う" /><b>ChatGPT等のチャット型は使う</b></label>
               <label class="choice"><input type="radio" name="ai" value="AIエージェントも試している" /><b>AIエージェントも試している</b></label>
-              <label class="choice"><input type="radio" name="ai" value="その他" /><b>その他</b></label>
+              <label class="choice"><input type="radio" name="ai" value="その他" id="ai_other_rb" /><b>その他</b></label>
             </div>
+            <input type="text" name="ai_other" id="ai_other" class="other-input" placeholder="その他の内容をご記入ください（任意）" style="display:none" />
           </div>
 
           <div class="frow">
-            <label for="comment">ご感想・ご質問・ご要望がございましたら、お聞かせください<span class="opt">任意</span></label>
+            <label for="comment">ご感想・ご質問・ご要望がございましたら、ぜひお聞かせください<span class="opt">任意</span></label>
             <textarea name="comment" id="comment" placeholder="心に残った点、もっと知りたいこと、運営へのご要望など、お気軽にどうぞ。"></textarea>
           </div>
         </fieldset>
 
         <fieldset>
           <legend>今後について</legend>
-          <div class="frow">
-            <span class="flabel">税理士ワークシフトサロンへのご入会について、お聞かせください<span class="req">必須</span></span>
-            <div class="choice-grid">
-              <label class="choice"><input type="radio" name="intent" value="今すぐ入会したい" required /><span><b>今すぐ入会したい</b><small>本日ご入会の特典として、個別セットアップサポート（30分・無料）をご用意しています。日程調整につきましては、後日、事務局よりご連絡します。</small></span></label>
-              <label class="choice"><input type="radio" name="intent" value="前向きに検討したい" /><span><b>前向きに検討したい</b><small>後日、あらためてご案内をお送りします</small></span></label>
-              <label class="choice"><input type="radio" name="intent" value="今回は見送る" /><span><b>今回は見送る</b><small>アンケートのみご回答いただけます</small></span></label>
+          <div class="join-cta">
+            <div class="cta-head">サロンへのご入会をご希望ですか？</div>
+            <div class="cta-sub">「今すぐ入会したい」を選んで送信すると、そのままお申し込みフォーム（お名前・お支払い）へ進めます。</div>
+            <div class="frow" style="margin-bottom:0">
+              <span class="flabel">税理士ワークシフトサロンへのご入会について、お聞かせください<span class="req">必須</span></span>
+              <div class="choice-grid">
+                <label class="choice join-now"><input type="radio" name="intent" value="今すぐ入会したい" required /><span><b>今すぐ入会したい</b><small>本日ご入会の特典として、個別セットアップサポート（30分・無料）をご用意しています。日程調整につきましては、後日、事務局よりご連絡します。</small></span></label>
+                <label class="choice"><input type="radio" name="intent" value="前向きに検討したい" /><span><b>前向きに検討したい</b><small>後日、あらためてご案内をお送りします</small></span></label>
+                <label class="choice"><input type="radio" name="intent" value="今回は見送る" /><span><b>今回は見送る</b><small>アンケートのみご回答いただけます</small></span></label>
+              </div>
+              <div class="next-hint" id="nextHint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                <span>このまま送信ボタンを押すと、<b>ご入会のお申し込みフォーム</b>（お名前・お支払い）に進みます。</span>
+              </div>
             </div>
           </div>
 
@@ -251,6 +271,37 @@ var GAS_URL = "https://script.google.com/macros/s/AKfycbzH3ahJG4BhDa_HW_T3guWIgL
 var form = document.getElementById("surveyForm");
 var errMsg = document.getElementById("errMsg");
 var submitBtn = document.getElementById("submitBtn");
+
+/* 「その他」記入欄の表示切替 */
+var impOtherCb = document.getElementById("impressed_other_cb");
+var impOtherInput = document.getElementById("impressed_other");
+impOtherCb.addEventListener("change", function(){
+  impOtherInput.style.display = impOtherCb.checked ? "block" : "none";
+  if (impOtherCb.checked) impOtherInput.focus();
+});
+document.querySelectorAll('input[name="ai"]').forEach(function(r){
+  r.addEventListener("change", function(){
+    var isOther = document.getElementById("ai_other_rb").checked;
+    var el = document.getElementById("ai_other");
+    el.style.display = isOther ? "block" : "none";
+    if (isOther) el.focus();
+  });
+});
+
+/* 入会を選ぶと、進み先ヒント表示＋送信ボタンの文言を切替 */
+function refreshCta(){
+  var joinEl = document.querySelector('input[name="intent"][value="今すぐ入会したい"]');
+  var join = !!(joinEl && joinEl.checked);
+  document.getElementById("nextHint").classList.toggle("show", join);
+  submitBtn.innerHTML = (join ? "お申し込みフォームへ進む" : "アンケートを送信する") + ' <span aria-hidden="true">→</span>';
+  document.getElementById("submitNote").textContent = join
+    ? "送信後、ご入会のお申し込みフォーム（お名前・お支払い）に進みます。"
+    : "ご協力ありがとうございます。";
+}
+document.querySelectorAll('input[name="intent"]').forEach(function(r){
+  r.addEventListener("change", refreshCta);
+});
+
 form.addEventListener("submit", function(ev){
   ev.preventDefault();
   errMsg.classList.remove("show");
@@ -270,12 +321,20 @@ form.addEventListener("submit", function(ev){
 
   /* データ整形 */
   var fd = new FormData(form);
-  var impressed = fd.getAll("impressed").join(" / ");
-  var concern = fd.getAll("concern").join(" / ");
+  var skip = ["impressed", "concern", "impressed_other", "ai_other"];
   var data = {formType: "survey"};
-  fd.forEach(function(v, k){ if (k !== "impressed" && k !== "concern") data[k] = String(v).trim(); });
-  data.impressed = impressed;
-  data.concern = concern;
+  fd.forEach(function(v, k){ if (skip.indexOf(k) === -1) data[k] = String(v).trim(); });
+  /* 印象に残った点（「その他」は記入内容を反映） */
+  var impOtherVal = (fd.get("impressed_other") || "").trim();
+  data.impressed = fd.getAll("impressed").map(function(x){
+    return (x === "その他" && impOtherVal) ? "その他：" + impOtherVal : x;
+  }).join(" / ");
+  /* AI活用状況（「その他」は記入内容を反映） */
+  if (data.ai === "その他"){
+    var aiOtherVal = (fd.get("ai_other") || "").trim();
+    if (aiOtherVal) data.ai = "その他：" + aiOtherVal;
+  }
+  data.concern = fd.getAll("concern").join(" / ");
 
   submitBtn.disabled = true;
   submitBtn.textContent = "送信中…";
@@ -293,7 +352,7 @@ form.addEventListener("submit", function(ev){
     .then(done)
     .catch(function(){
       submitBtn.disabled = false;
-      submitBtn.innerHTML = 'アンケートを送信する <span aria-hidden="true">→</span>';
+      refreshCta();
       errMsg.textContent = "送信に失敗しました。通信環境をご確認のうえ再度お試しください。";
       errMsg.classList.add("show");
     });
