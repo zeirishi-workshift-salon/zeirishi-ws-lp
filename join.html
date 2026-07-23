@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ご入会のお手続き｜税理士ワークシフトサロン</title>
+<meta name="description" content="税理士ワークシフトサロンへのご入会お申し込みページです。月額33,000円（税込）・いつでも退会可能。" />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#0c1c34" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#172e4d;--ink:#0c1b30;
+  --gold:#b08949;--gold-bright:#d4ad63;--gold-deep:#9a7338;
+  --bg:#f6f7fa;--paper:#fff;--text:#1d2840;--muted:#5c6982;--muted-2:#8590a4;
+  --line:#e5e8ef;--line-2:#d6dce7;
+  --grad-navy:radial-gradient(120% 130% at 78% -10%,#1d3c60 0%,#13294a 48%,#0a1828 100%);
+  --grad-gold:linear-gradient(100deg,#caa15c 0%,#b0894a 52%,#8f6c34 100%);
+  --shadow:0 16px 44px rgba(12,27,48,.12);
+  --radius:16px;
+  --serif:"Noto Serif JP",serif;
+  --sans:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--gold-deep)}
+
+.site-header{background:var(--grad-navy);padding:14px 0}
+.header-in{max-width:880px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px}
+.header-in .brand-logo{height:38px;width:auto;display:block}
+.header-in a{margin-left:auto;color:rgba(255,255,255,.75);font-size:.78rem;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px;transition:.25s}
+.header-in a:hover{color:#fff;border-color:rgba(255,255,255,.6)}
+
+.intro{background:var(--grad-navy);color:#fff;text-align:center;padding:44px 20px 110px}
+.intro-eyebrow{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.18em;color:var(--gold-bright);border:1px solid rgba(212,173,99,.55);border-radius:999px;padding:6px 18px;margin-bottom:18px}
+.intro h1{font-family:var(--serif);font-size:clamp(1.5rem,4.6vw,2.1rem);font-weight:700;line-height:1.5;letter-spacing:.02em}
+.intro p.lead{margin-top:14px;font-size:.94rem;color:rgba(255,255,255,.85);line-height:1.9}
+
+.form-wrap{max-width:680px;margin:-72px auto 60px;padding:0 20px}
+.form-card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px 34px 42px}
+
+.price-box{background:var(--grad-navy);color:#fff;border-radius:14px;padding:24px 22px;margin-bottom:26px;text-align:center}
+.price-box .pb-name{font-size:.8rem;font-weight:700;letter-spacing:.12em;color:var(--gold-bright)}
+.price-box .pb-price{font-family:var(--serif);font-size:1.9rem;font-weight:700;margin:6px 0 2px}
+.price-box .pb-price small{font-size:.95rem;font-weight:500}
+.price-box .pb-sub{font-size:.8rem;color:rgba(255,255,255,.75);margin-top:4px}
+.incl{list-style:none;max-width:520px;margin:22px auto 4px;text-align:left;display:grid;gap:8px}
+.incl li{display:flex;gap:9px;align-items:flex-start;font-size:.86rem;color:var(--text)}
+.incl svg{width:16px;height:16px;flex:none;color:var(--gold-deep);margin-top:5px}
+
+fieldset{border:none;margin:26px 0 8px}
+legend{width:100%;font-size:.8rem;font-weight:800;letter-spacing:.12em;color:var(--gold-deep);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:20px}
+.frow{margin-bottom:22px}
+.frow>label,.frow>.flabel{display:block;font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:8px}
+.req{display:inline-block;vertical-align:1px;font-size:.62rem;font-weight:800;letter-spacing:.06em;border-radius:5px;padding:2px 7px;margin-left:8px;color:#fff;background:#b0513f}
+.fhint{font-size:.76rem;color:var(--muted-2);margin-top:6px}
+.f2col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input[type=text],input[type=email],select{width:100%;font-family:var(--sans);font-size:1rem;color:var(--ink);background:#fbfcfe;border:1px solid var(--line-2);border-radius:10px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(176,137,73,.15)}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a7338' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.choice{position:relative;display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line-2);border-radius:10px;background:#fbfcfe;padding:12px 14px;cursor:pointer;font-size:.92rem;font-weight:500}
+.choice input{accent-color:var(--gold-deep);width:18px;height:18px;flex:none;margin-top:4px}
+.choice:has(input:checked){border-color:var(--gold);background:#fdf9f1;font-weight:700}
+.consent-box{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:.8rem;color:var(--muted);margin-bottom:24px}
+.consent-box .choice{margin-top:10px;background:#fff}
+.pp-link{display:inline-block;margin-top:8px;margin-right:14px;font-size:.82rem;font-weight:700;color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+
+.submit-area{text-align:center}
+.btn-gold{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--sans);font-weight:700;font-size:1.06rem;color:#23170a;background:var(--grad-gold);border:none;border-radius:999px;padding:1.05em 2.6em;max-width:100%;line-height:1.45;cursor:pointer;box-shadow:0 14px 30px rgba(140,104,46,.4),inset 0 1px 0 rgba(255,255,255,.4);transition:transform .25s ease,box-shadow .25s ease}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(140,104,46,.5)}
+.btn-gold:disabled{opacity:.6;cursor:wait}
+.submit-note{font-size:.76rem;color:var(--muted-2);margin-top:14px;line-height:1.9}
+.err-msg{display:none;background:#fdf0ee;border:1px solid #e5b8af;color:#8c3a2b;border-radius:10px;padding:12px 16px;font-size:.85rem;margin-bottom:18px}
+.err-msg.show{display:block}
+
+.thanks{display:none;text-align:center;padding:10px 0}
+.thanks.show{display:block}
+.thanks .tk-ic{width:64px;height:64px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;margin:0 auto 18px}
+.thanks .tk-ic svg{width:30px;height:30px;color:#23170a}
+.thanks h2{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin-bottom:14px;line-height:1.5}
+.thanks p{font-size:.92rem;color:var(--muted);margin-bottom:14px;text-align:left}
+
+.site-footer{background:var(--grad-navy);color:rgba(255,255,255,.6);text-align:center;font-size:.75rem;padding:26px 20px}
+.site-footer a{color:rgba(255,255,255,.75)}
+
+@media(max-width:640px){.form-card{padding:28px 18px 34px}.f2col{grid-template-columns:1fr}.intro{padding-bottom:96px}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-in">
+    <img class="brand-logo" src="assets/logo-yoko-light.png" alt="税理士ワークシフトサロン" />
+    <a href="./">サロン紹介ページへ</a>
+  </div>
+</header>
+
+<section class="intro">
+  <span class="intro-eyebrow">ご入会のお手続き</span>
+  <h1>税理士ワークシフトサロンへ、<br>ようこそ。</h1>
+  <p class="lead">下記のご入力（約1分）のあと、お支払い手続きにお進みいただけます。<br>月額制（毎月自動更新）です。最低利用期間はなく、ご退会はいつでも承ります。</p>
+</section>
+
+<div class="form-wrap">
+  <div class="form-card">
+
+    <div id="form-view">
+
+      <div class="price-box">
+        <div class="pb-name">月額会員（すべて込み・追加費用なし）</div>
+        <div class="pb-price">33,000円 <small>／月（税込）</small></div>
+        <div class="pb-sub">1日あたり約1,100円　｜　いつでも退会可能</div>
+      </div>
+
+      <ul class="incl">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>月1回のAI実演セミナー／解説動画60本以上（毎月追加）</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>AI必殺仕訳人・AIキノシタくん・相続税AIツール群</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>フォローアップ会・Slackコミュニティ（いつでも質問）</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>ワークシフト講座（効率化の、その先へ）</li>
+      </ul>
+
+      <div class="err-msg" id="errMsg"></div>
+
+      <form id="joinForm" novalidate>
+        <input type="text" name="website" id="hp" style="position:absolute;left:-9999px;opacity:0" tabindex="-1" autocomplete="off" />
+
+        <fieldset>
+          <legend>ご入会される方の情報</legend>
+
+          <div class="frow">
+            <span class="flabel">お名前<span class="req">必須</span></span>
+            <div class="f2col">
+              <input type="text" name="sei" id="sei" placeholder="姓（例：木下）" required autocomplete="family-name" />
+              <input type="text" name="mei" id="mei" placeholder="名（例：勇人）" required autocomplete="given-name" />
+            </div>
+          </div>
+
+          <div class="frow">
+            <span class="flabel">ふりがな<span class="req">必須</span></span>
+            <div class="f2col">
+              <input type="text" name="sei_kana" id="sei_kana" placeholder="せい（例：きのした）" required />
+              <input type="text" name="mei_kana" id="mei_kana" placeholder="めい（例：はやと）" required />
+            </div>
+          </div>
+
+          <div class="frow">
+            <label for="email">メールアドレス<span class="req">必須</span></label>
+            <input type="email" name="email" id="email" placeholder="例：example@gmail.com" required autocomplete="email" />
+            <p class="fhint">ご入会後のご案内・スタート会のご連絡をお送りします。お間違いのないようご入力ください。</p>
+          </div>
+
+          <div class="frow">
+            <label for="office">事務所名<span class="req">必須</span></label>
+            <input type="text" name="office" id="office" placeholder="例：〇〇税理士事務所／税理士法人〇〇" required autocomplete="organization" />
+          </div>
+
+          <div class="frow">
+            <label for="pref">都道府県<span class="req">必須</span></label>
+            <select name="pref" id="pref" required>
+              <option value="">選択してください</option>
+            </select>
+          </div>
+
+          <div class="frow">
+            <span class="flabel">資格・お立場<span class="req">必須</span></span>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+              <label class="choice"><input type="radio" name="role" value="税理士" required /><b>税理士</b></label>
+              <label class="choice"><input type="radio" name="role" value="公認会計士" /><b>公認会計士</b></label>
+              <label class="choice"><input type="radio" name="role" value="会計事務所スタッフ" /><b>会計事務所スタッフ</b></label>
+              <label class="choice"><input type="radio" name="role" value="その他" /><b>その他</b></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="consent-box">
+          <b>ご入会にあたってのご確認</b><br />
+          会費は月額33,000円（税込）です。この後の決済（Square）にお進みいただくと、月額のお支払いが開始され、以後は毎月同日に自動で更新されます。最低利用期間はなく、ご退会はいつでも承りますが、解約をご希望の場合は、次回決済日の10日前までにお問い合わせ先へご連絡ください。月の途中でご解約された場合も、日割りでの返金は行っておりません。お支払い・特定商取引法に基づく表記、個人情報の取り扱いの詳細については、下記をご確認ください。
+          <a class="pp-link" href="tokushoho.html" target="_blank" rel="noopener noreferrer">特定商取引法に基づく表記 ↗</a>
+          <a class="pp-link" href="https://www.leding.or.jp/privacy/" target="_blank" rel="noopener noreferrer">個人情報の取り扱い ↗</a>
+          <label class="choice"><input type="checkbox" name="consent" id="consent" required /><b>上記に同意します</b></label>
+        </div>
+
+        <div class="submit-area">
+          <button type="submit" class="btn-gold" id="submitBtn">同意して、お支払いへ進む <span aria-hidden="true">→</span></button>
+          <p class="submit-note">お支払いはSquareの安全な決済ページで行われます。<br>お支払いの完了をもって、ご入会が確定します。</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="thanks" id="thanks">
+      <div class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg></div>
+      <h2>ありがとうございます。<br>最後に、お支払いのお手続きへ</h2>
+      <p>ご入会のお申し込みを受け付けました。続けて、下のボタンから<b>お支払い手続き（Square）</b>にお進みください。お支払いの完了をもって、ご入会が確定します。</p>
+      <p>お支払い後、<b>24時間以内</b>に、ご登録のメールアドレスへ事務局よりご案内（Slack・セミナーのご参加方法など）をお送りします。</p>
+      <div class="submit-area" style="margin-top:8px">
+        <a class="btn-gold" id="payBtn" href="#">お支払い手続きへ進む <span aria-hidden="true">→</span></a>
+        <p class="submit-note">手続きが完了しない場合は、leding.clientdesk@gmail.com までご連絡ください。</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  税理士ワークシフトサロン｜運営：税理士法人レディング<br />
+  <a href="./">サロン紹介</a> ｜ <a href="tokushoho.html">特定商取引法に基づく表記</a> ｜ <a href="https://www.leding.or.jp/privacy/" target="_blank" rel="noopener noreferrer">個人情報保護方針</a><br />
+  お問い合わせ：<a href="mailto:leding.clientdesk@gmail.com">leding.clientdesk@gmail.com</a>
+</footer>
+
+<script>
+/* ① 送信先（アンケートと共通のApps Script URL。同じURLでOK・formType で振り分け）
+   ② Squareの月額サブスク決済URL */
+var GAS_URL = "https://script.google.com/macros/s/AKfycbzH3ahJG4BhDa_HW_T3guWIgLXh9B5sZhfn1IMjrzWDLs3tlllsfbYLA1l23y8mSbsBkg/exec"; // アンケートと共通
+var SQUARE_URL = "https://checkout.square.site/merchant/MLRJG83Z5S3KS/checkout/H23ABJJ3C6CXQADRE4LBTBCT";
+
+/* 都道府県 */
+var PREFS = ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"];
+var prefSel = document.getElementById("pref");
+PREFS.forEach(function(p){ var o = document.createElement("option"); o.value = p; o.textContent = p; prefSel.appendChild(o); });
+
+var form = document.getElementById("joinForm");
+var errMsg = document.getElementById("errMsg");
+form.addEventListener("submit", function(ev){
+  ev.preventDefault();
+  errMsg.classList.remove("show");
+
+  if (!form.checkValidity()){
+    var bad = form.querySelector(":invalid");
+    var msg = "未入力の必須項目があります。ご確認ください。";
+    if (bad && bad.id === "consent") msg = "ご入会にあたってのご確認への同意をお願いします。";
+    errMsg.textContent = msg;
+    errMsg.classList.add("show");
+    if (bad){ bad.scrollIntoView({behavior:"smooth", block:"center"}); if (bad.focus) bad.focus({preventScroll:true}); }
+    return;
+  }
+
+  if (!SQUARE_URL){
+    errMsg.textContent = "ただいま決済ページの準備中です。恐れ入りますが leding.clientdesk@gmail.com までご連絡ください。";
+    errMsg.classList.add("show");
+    return;
+  }
+
+  var fd = new FormData(form);
+  var data = {formType: "join"};
+  fd.forEach(function(v, k){ data[k] = String(v).trim(); });
+
+  var btn = document.getElementById("submitBtn");
+  btn.disabled = true;
+  btn.textContent = "送信中…";
+
+  var done = function(){
+    document.getElementById("payBtn").setAttribute("href", SQUARE_URL);
+    document.getElementById("form-view").style.display = "none";
+    document.getElementById("thanks").classList.add("show");
+    window.scrollTo({top:0, behavior:"smooth"});
+  };
+
+  if (!GAS_URL){ done(); return; }
+
+  fetch(GAS_URL, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain"}, body: JSON.stringify(data)})
+    .then(done)
+    .catch(function(){
+      btn.disabled = false;
+      btn.innerHTML = '同意して、お支払いへ進む <span aria-hidden="true">→</span>';
+      errMsg.textContent = "送信に失敗しました。通信環境をご確認のうえ再度お試しください。";
+      errMsg.classList.add("show");
+    });
+});
+</script>
+</body>
+</html>

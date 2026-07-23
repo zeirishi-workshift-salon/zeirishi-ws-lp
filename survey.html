@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>体験会アンケート ＆ ご入会のお手続き｜税理士ワークシフトサロン</title>
+<meta name="description" content="無料セミナー体験会のアンケート、および税理士ワークシフトサロンへのご入会お申し込みフォームです。" />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#0c1c34" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#172e4d;--ink:#0c1b30;
+  --gold:#b08949;--gold-bright:#d4ad63;--gold-deep:#9a7338;
+  --bg:#f6f7fa;--paper:#fff;--text:#1d2840;--muted:#5c6982;--muted-2:#8590a4;
+  --line:#e5e8ef;--line-2:#d6dce7;
+  --grad-navy:radial-gradient(120% 130% at 78% -10%,#1d3c60 0%,#13294a 48%,#0a1828 100%);
+  --grad-gold:linear-gradient(100deg,#caa15c 0%,#b0894a 52%,#8f6c34 100%);
+  --shadow-sm:0 2px 10px rgba(12,27,48,.06);--shadow:0 16px 44px rgba(12,27,48,.12);
+  --radius:16px;
+  --serif:"Noto Serif JP",serif;
+  --sans:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--gold-deep)}
+
+.site-header{background:var(--grad-navy);padding:14px 0}
+.header-in{max-width:880px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px}
+.header-in .brand-logo{height:38px;width:auto;display:block}
+.header-in a{margin-left:auto;color:rgba(255,255,255,.75);font-size:.78rem;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px;transition:.25s}
+.header-in a:hover{color:#fff;border-color:rgba(255,255,255,.6)}
+
+.intro{background:var(--grad-navy);color:#fff;text-align:center;padding:44px 20px 110px}
+.intro-eyebrow{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.18em;color:var(--gold-bright);border:1px solid rgba(212,173,99,.55);border-radius:999px;padding:6px 18px;margin-bottom:18px}
+.intro h1{font-family:var(--serif);font-size:clamp(1.5rem,4.6vw,2.1rem);font-weight:700;line-height:1.5;letter-spacing:.02em}
+.intro p.lead{margin-top:14px;font-size:.94rem;color:rgba(255,255,255,.85);line-height:1.9}
+
+.form-wrap{max-width:760px;margin:-72px auto 60px;padding:0 20px}
+.form-card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px 34px 42px}
+.fc-title{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--ink);text-align:center}
+.fc-sub{text-align:center;font-size:.85rem;color:var(--muted);margin:8px 0 26px;line-height:1.9}
+fieldset{border:none;margin:0 0 8px}
+legend{width:100%;font-size:.8rem;font-weight:800;letter-spacing:.12em;color:var(--gold-deep);border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:20px}
+.frow{margin-bottom:22px}
+.frow>label,.frow>.flabel{display:block;font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:8px}
+.req,.opt{display:inline-block;vertical-align:1px;font-size:.62rem;font-weight:800;letter-spacing:.06em;border-radius:5px;padding:2px 7px;margin-left:8px}
+.req{color:#fff;background:#b0513f}
+.opt{color:var(--muted);background:var(--bg);border:1px solid var(--line-2)}
+.fhint{font-size:.76rem;color:var(--muted-2);margin-top:6px}
+.f2col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input[type=text],input[type=email],select,textarea{width:100%;font-family:var(--sans);font-size:1rem;color:var(--ink);background:#fbfcfe;border:1px solid var(--line-2);border-radius:10px;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(176,137,73,.15)}
+textarea{min-height:96px;resize:vertical}
+.choice-grid{display:grid;gap:10px}
+.choice-grid.cols2{grid-template-columns:1fr 1fr}
+.choice-grid.cols5{grid-template-columns:repeat(5,1fr)}
+.choice{position:relative;display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line-2);border-radius:10px;background:#fbfcfe;padding:12px 14px;cursor:pointer;font-size:.92rem;font-weight:500;transition:border-color .2s,background .2s}
+.choice.center{flex-direction:column;align-items:center;text-align:center;gap:6px;padding:12px 6px}
+.choice.rate{padding:14px 4px 12px}
+.choice.rate input{position:absolute;opacity:0;pointer-events:none}
+.choice.rate .num{font-family:var(--serif);font-weight:700;font-size:1.85rem;line-height:1;color:var(--gold-deep)}
+.choice.rate .sc{color:var(--muted)}
+.choice.rate:has(input:checked) .num{color:var(--gold-deep)}
+.choice.rate:has(input:checked) .sc{color:var(--ink)}
+.rate-ends{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted-2);margin-top:6px;padding:0 2px}
+.choice input{accent-color:var(--gold-deep);width:18px;height:18px;flex:none;margin-top:4px}
+.choice.center input{margin-top:0}
+.choice:has(input:checked){border-color:var(--gold);background:#fdf9f1;font-weight:700}
+.choice b{font-weight:inherit}
+.choice small{display:block;font-size:.76rem;font-weight:500;color:var(--muted)}
+.choice .sc{font-size:.8rem;font-weight:700;line-height:1.35}
+
+#join-block{display:none;margin-top:14px;border-top:1px dashed var(--line-2);padding-top:26px}
+#join-block.show{display:block}
+.price-box{background:var(--grad-navy);color:#fff;border-radius:14px;padding:20px 22px;margin-bottom:22px;text-align:center}
+.price-box .pb-name{font-size:.8rem;font-weight:700;letter-spacing:.12em;color:var(--gold-bright)}
+.price-box .pb-price{font-family:var(--serif);font-size:1.7rem;font-weight:700;margin:6px 0 2px}
+.price-box .pb-price small{font-size:.9rem;font-weight:500}
+.price-box .pb-sub{font-size:.78rem;color:rgba(255,255,255,.72)}
+.consent-box{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:.8rem;color:var(--muted);margin-bottom:24px}
+.consent-box .choice{margin-top:10px;background:#fff}
+.pp-link{display:inline-block;margin-top:8px;margin-right:14px;font-size:.82rem;font-weight:700;color:var(--gold-deep);text-decoration:underline;text-underline-offset:3px}
+
+.submit-area{text-align:center}
+.btn-gold{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--sans);font-weight:700;font-size:1.06rem;color:#23170a;background:var(--grad-gold);border:none;border-radius:999px;padding:1.05em 2.6em;max-width:100%;line-height:1.45;cursor:pointer;box-shadow:0 14px 30px rgba(140,104,46,.4),inset 0 1px 0 rgba(255,255,255,.4);transition:transform .25s ease,box-shadow .25s ease}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(140,104,46,.5)}
+.btn-gold:disabled{opacity:.6;cursor:wait}
+.submit-note{font-size:.76rem;color:var(--muted-2);margin-top:14px;line-height:1.9}
+.err-msg{display:none;background:#fdf0ee;border:1px solid #e5b8af;color:#8c3a2b;border-radius:10px;padding:12px 16px;font-size:.85rem;margin-bottom:18px}
+.err-msg.show{display:block}
+
+.thanks{display:none;text-align:center;padding:20px 0 10px}
+.thanks.show{display:block}
+.thanks .tk-ic{width:64px;height:64px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;margin:0 auto 18px}
+.thanks .tk-ic svg{width:30px;height:30px;color:#23170a}
+.thanks h2{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin-bottom:14px}
+.thanks p{font-size:.92rem;color:var(--muted);margin-bottom:14px;text-align:left}
+.thanks .tk-back{display:inline-block;margin-top:14px;font-size:.88rem}
+
+.site-footer{background:var(--grad-navy);color:rgba(255,255,255,.6);text-align:center;font-size:.75rem;padding:26px 20px}
+.site-footer a{color:rgba(255,255,255,.75)}
+
+@media(max-width:640px){
+  .form-card{padding:28px 18px 34px}
+  .f2col{grid-template-columns:1fr}
+  .choice-grid.cols2{grid-template-columns:1fr}
+  .choice-grid.cols5{grid-template-columns:1fr 1fr}
+  .intro{padding-bottom:96px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-in">
+    <img class="brand-logo" src="assets/logo-yoko-light.png" alt="税理士ワークシフトサロン" />
+    <a href="./">サロン紹介ページへ</a>
+  </div>
+</header>
+
+<section class="intro">
+  <span class="intro-eyebrow">体験会アンケート</span>
+  <h1>アンケートのお願い</h1>
+  <p class="lead">本日は「税理士ワークシフトサロン 無料セミナー体験会」へご参加いただき、<br>誠にありがとうございました。<br>アンケートへのご協力を、よろしくお願いいたします。</p>
+</section>
+
+<div class="form-wrap">
+  <div class="form-card">
+
+    <div id="form-view">
+      <p class="fc-sub">アンケートは、ご入会の有無にかかわらず、ぜひお聞かせください。</p>
+
+      <div class="err-msg" id="errMsg"></div>
+
+      <form id="surveyForm" novalidate>
+        <input type="text" name="website" id="hp" style="position:absolute;left:-9999px;opacity:0" tabindex="-1" autocomplete="off" />
+
+        <fieldset>
+          <legend>本日のアンケート</legend>
+
+          <div class="frow">
+            <span class="flabel">本日のセミナーの満足度を、お聞かせください<span class="req">必須</span></span>
+            <div class="choice-grid cols5">
+              <label class="choice center rate"><input type="radio" name="satisfaction" value="5" required /><span class="num">5</span><span class="sc">とても満足</span></label>
+              <label class="choice center rate"><input type="radio" name="satisfaction" value="4" /><span class="num">4</span><span class="sc">満足</span></label>
+              <label class="choice center rate"><input type="radio" name="satisfaction" value="3" /><span class="num">3</span><span class="sc">ふつう</span></label>
+              <label class="choice center rate"><input type="radio" name="satisfaction" value="2" /><span class="num">2</span><span class="sc">やや不満</span></label>
+              <label class="choice center rate"><input type="radio" name="satisfaction" value="1" /><span class="num">1</span><span class="sc">不満</span></label>
+            </div>
+            <div class="rate-ends"><span>5：とても満足</span><span>1：物足りなかった</span></div>
+          </div>
+
+          <div class="frow">
+            <span class="flabel">特に印象に残った項目はどれですか？<span class="opt">任意・複数可</span></span>
+            <div class="choice-grid">
+              <label class="choice"><input type="checkbox" name="impressed" value="【実演】証憑が仕訳になるまで" /><b>【実演】証憑が仕訳になるまで</b></label>
+              <label class="choice"><input type="checkbox" name="impressed" value="【実演】今日から誰でもできる（渡すだけで成果物になる）" /><b>【実演】今日から誰でもできる — 渡すだけで成果物になる</b></label>
+              <label class="choice"><input type="checkbox" name="impressed" value="一人も置き去りにしないサポートサービス" /><b>一人も置き去りにしないサポートサービス</b></label>
+              <label class="choice"><input type="checkbox" name="impressed" value="すぐ使えるもの（AIキノシタくん・AI必殺仕訳人・AIナレッジ）" /><b>すぐ使えるもの — AIキノシタくん・AI必殺仕訳人・AIナレッジ</b></label>
+              <label class="choice"><input type="checkbox" name="impressed" value="ワークシフト（変化のその先へ）" /><b>ワークシフト — 変化のその先へ</b></label>
+              <label class="choice"><input type="checkbox" name="impressed" value="その他" /><b>その他</b></label>
+            </div>
+          </div>
+
+          <div class="frow">
+            <span class="flabel">現在のAI活用状況を、お聞かせください<span class="opt">任意</span></span>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="ai" value="これから（ほぼ使ったことがない）" /><b>これから（ほぼ使ったことがない）</b></label>
+              <label class="choice"><input type="radio" name="ai" value="ChatGPT等のチャット型は使う" /><b>ChatGPT等のチャット型は使う</b></label>
+              <label class="choice"><input type="radio" name="ai" value="AIエージェントも試している" /><b>AIエージェントも試している</b></label>
+              <label class="choice"><input type="radio" name="ai" value="その他" /><b>その他</b></label>
+            </div>
+          </div>
+
+          <div class="frow">
+            <label for="comment">ご感想・ご質問・ご要望がございましたら、お聞かせください<span class="opt">任意</span></label>
+            <textarea name="comment" id="comment" placeholder="心に残った点、もっと知りたいこと、運営へのご要望など、お気軽にどうぞ。"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>今後について</legend>
+          <div class="frow">
+            <span class="flabel">税理士ワークシフトサロンへのご入会について、お聞かせください<span class="req">必須</span></span>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="intent" value="今すぐ入会したい" required /><span><b>今すぐ入会したい</b><small>本日ご入会の特典として、個別セットアップサポート（30分・無料）をご用意しています。日程調整につきましては、後日、事務局よりご連絡します。</small></span></label>
+              <label class="choice"><input type="radio" name="intent" value="前向きに検討したい" /><span><b>前向きに検討したい</b><small>後日、あらためてご案内をお送りします</small></span></label>
+              <label class="choice"><input type="radio" name="intent" value="今回は見送る" /><span><b>今回は見送る</b><small>アンケートのみご回答いただけます</small></span></label>
+            </div>
+          </div>
+
+          <div class="frow" style="margin-bottom:0">
+            <span class="flabel">ご入会にあたって、気になる点・迷っている点がございましたら、お聞かせください<span class="opt">任意・複数可</span></span>
+            <div class="choice-grid">
+              <label class="choice"><input type="checkbox" name="concern" value="料金（続けられるか）" /><b>料金（続けられるか）</b></label>
+              <label class="choice"><input type="checkbox" name="concern" value="自分のレベルでついていけるか" /><b>自分のレベルでついていけるか</b></label>
+              <label class="choice"><input type="checkbox" name="concern" value="時間が取れるか" /><b>時間が取れるか</b></label>
+              <label class="choice"><input type="checkbox" name="concern" value="内容が自分の実務に合うか" /><b>内容が自分の実務に合うか</b></label>
+              <label class="choice"><input type="checkbox" name="concern" value="サポートが十分か" /><b>サポートが十分か</b></label>
+            </div>
+            <textarea name="concern_detail" id="concern_detail" placeholder="「あと何があれば入会したい」など、率直なお気持ちをお聞かせいただけますと幸いです。" style="margin-top:10px"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="submit-area">
+          <button type="submit" class="btn-gold" id="submitBtn">アンケートを送信する <span aria-hidden="true">→</span></button>
+          <p class="submit-note" id="submitNote">ご協力ありがとうございます。</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- 「今すぐ入会」の方への完了画面（入会ページへ） -->
+    <div class="thanks" id="thanks-join">
+      <div class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg></div>
+      <h2>アンケートありがとうございました。<br>続けて、ご入会のお手続きへ</h2>
+      <p>「今すぐ入会したい」をお選びいただき、ありがとうございます。<br>続けて、下のボタンからご入会のお手続き（お名前のご入力とお支払い）にお進みください。</p>
+      <div class="submit-area" style="margin-top:8px">
+        <a class="btn-gold" href="join.html">ご入会のお手続きへ進む <span aria-hidden="true">→</span></a>
+        <p class="submit-note">この先で、お名前のご入力とお支払い（Square）にお進みいただけます。</p>
+      </div>
+    </div>
+
+    <!-- 検討・見送りの方への完了画面 -->
+    <div class="thanks" id="thanks-normal">
+      <div class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg></div>
+      <h2>ご回答ありがとうございました</h2>
+      <p>いただいたご意見は、これからの運営に大切に生かしてまいります。<br>「前向きに検討したい」とお答えいただいた先生には、あらためてご案内をお送りします。</p>
+      <p>ご不明な点は、<a href="mailto:leding.clientdesk@gmail.com">leding.clientdesk@gmail.com</a> までお気軽にどうぞ。</p>
+      <a class="tk-back" href="./">← サロン紹介ページへ</a>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  税理士ワークシフトサロン｜運営：税理士法人レディング<br />
+  <a href="./">サロン紹介</a> ｜ <a href="tokushoho.html">特定商取引法に基づく表記</a> ｜ <a href="https://www.leding.or.jp/privacy/" target="_blank" rel="noopener noreferrer">個人情報保護方針</a><br />
+  お問い合わせ：<a href="mailto:leding.clientdesk@gmail.com">leding.clientdesk@gmail.com</a>
+</footer>
+
+<script>
+/* 送信先（アンケート・入会 共通のApps Script ウェブアプリURL）。
+   ※ join.html と同じURLを使います（Apps Script側で formType により振り分け） */
+var GAS_URL = "https://script.google.com/macros/s/AKfycbzH3ahJG4BhDa_HW_T3guWIgLXh9B5sZhfn1IMjrzWDLs3tlllsfbYLA1l23y8mSbsBkg/exec";
+
+/* 送信 */
+var form = document.getElementById("surveyForm");
+var errMsg = document.getElementById("errMsg");
+var submitBtn = document.getElementById("submitBtn");
+form.addEventListener("submit", function(ev){
+  ev.preventDefault();
+  errMsg.classList.remove("show");
+
+  var intent = (document.querySelector('input[name="intent"]:checked')||{}).value;
+
+  if (!form.checkValidity()){
+    var bad = form.querySelector(":invalid");
+    var msg = "未入力の必須項目があります。ご確認ください。";
+    if (!document.querySelector('input[name="satisfaction"]:checked')) msg = "本日のご満足度をお選びください。";
+    else if (!intent) msg = "今後についてのご希望をお選びください。";
+    errMsg.textContent = msg;
+    errMsg.classList.add("show");
+    if (bad){ bad.scrollIntoView({behavior:"smooth", block:"center"}); if (bad.focus) bad.focus({preventScroll:true}); }
+    return;
+  }
+
+  /* データ整形 */
+  var fd = new FormData(form);
+  var impressed = fd.getAll("impressed").join(" / ");
+  var concern = fd.getAll("concern").join(" / ");
+  var data = {formType: "survey"};
+  fd.forEach(function(v, k){ if (k !== "impressed" && k !== "concern") data[k] = String(v).trim(); });
+  data.impressed = impressed;
+  data.concern = concern;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "送信中…";
+
+  var join = intent === "今すぐ入会したい";
+  var done = function(){
+    document.getElementById("form-view").style.display = "none";
+    document.getElementById(join ? "thanks-join" : "thanks-normal").classList.add("show");
+    window.scrollTo({top:0, behavior:"smooth"});
+  };
+
+  if (!GAS_URL){ done(); return; } // 保存先未設定でも画面は進める（保険）
+
+  fetch(GAS_URL, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain"}, body: JSON.stringify(data)})
+    .then(done)
+    .catch(function(){
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'アンケートを送信する <span aria-hidden="true">→</span>';
+      errMsg.textContent = "送信に失敗しました。通信環境をご確認のうえ再度お試しください。";
+      errMsg.classList.add("show");
+    });
+});
+</script>
+</body>
+</html>
