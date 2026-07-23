@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>お手続き完了｜税理士ワークシフトサロン</title>
+<meta name="description" content="ご入会のお手続きが完了しました。事務局より24時間以内にご連絡いたします。" />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#0c1c34" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#172e4d;--ink:#0c1b30;
+  --gold:#b08949;--gold-bright:#d4ad63;--gold-deep:#9a7338;
+  --bg:#f6f7fa;--paper:#fff;--text:#1d2840;--muted:#5c6982;--muted-2:#8590a4;
+  --line:#e5e8ef;--line-2:#d6dce7;
+  --grad-navy:radial-gradient(120% 130% at 78% -10%,#1d3c60 0%,#13294a 48%,#0a1828 100%);
+  --grad-gold:linear-gradient(100deg,#caa15c 0%,#b0894a 52%,#8f6c34 100%);
+  --shadow:0 16px 44px rgba(12,27,48,.12);
+  --radius:16px;
+  --serif:"Noto Serif JP",serif;
+  --sans:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.9;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+img{max-width:100%}
+a{color:var(--gold-deep)}
+
+.site-header{background:var(--grad-navy);padding:14px 0}
+.header-in{max-width:880px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px}
+.header-in .brand-logo{height:38px;width:auto;display:block}
+.header-in a{margin-left:auto;color:rgba(255,255,255,.75);font-size:.78rem;text-decoration:none;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px;transition:.25s}
+.header-in a:hover{color:#fff;border-color:rgba(255,255,255,.6)}
+
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 20px}
+.card{background:var(--paper);border-radius:var(--radius);box-shadow:var(--shadow);max-width:560px;width:100%;text-align:center;padding:52px 34px 46px}
+.tk-ic{width:76px;height:76px;border-radius:50%;background:var(--grad-gold);display:grid;place-items:center;margin:0 auto 24px;box-shadow:0 12px 28px rgba(140,104,46,.35)}
+.tk-ic svg{width:38px;height:38px;color:#23170a}
+.eyebrow{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.18em;color:var(--gold-deep);border:1px solid rgba(176,137,73,.5);border-radius:999px;padding:5px 16px;margin-bottom:18px}
+.card h1{font-family:var(--serif);font-size:clamp(1.4rem,4.6vw,1.72rem);font-weight:700;color:var(--ink);line-height:1.55;letter-spacing:.01em}
+.card .msg{margin-top:18px;font-size:.98rem;color:var(--text);line-height:2}
+.card .msg b{color:var(--gold-deep);font-weight:700}
+.notebox{margin-top:28px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-align:left;font-size:.85rem;color:var(--muted);line-height:1.9}
+.notebox .nb-t{font-weight:700;color:var(--ink);margin-bottom:6px;font-size:.88rem}
+.contact{margin-top:24px;font-size:.84rem;color:var(--muted-2)}
+.contact a{font-weight:700}
+.back{display:inline-block;margin-top:26px;font-size:.9rem;font-weight:700;color:var(--gold-deep);text-decoration:none}
+.back:hover{text-decoration:underline;text-underline-offset:3px}
+
+.site-footer{background:var(--grad-navy);color:rgba(255,255,255,.6);text-align:center;font-size:.75rem;padding:26px 20px}
+.site-footer a{color:rgba(255,255,255,.75)}
+@media(max-width:640px){.card{padding:40px 20px 34px}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-in">
+    <img class="brand-logo" src="assets/logo-yoko-light.png" alt="税理士ワークシフトサロン" />
+    <a href="./">サロン紹介ページへ</a>
+  </div>
+</header>
+
+<main class="main">
+  <div class="card">
+    <div class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg></div>
+    <span class="eyebrow">お手続き完了</span>
+    <h1>お申込みいただき、<br>ありがとうございました。</h1>
+    <p class="msg">事務局より<b>24時間以内にご連絡</b>いたします。<br>ご案内まで、今しばらくお待ちください。</p>
+
+    <div class="notebox">
+      <div class="nb-t">このあとの流れ</div>
+      ・ご登録のメールアドレスへ、事務局より参加方法（Slack・セミナー等）をご案内します。<br>
+      ・お支払い完了の確認メールは、決済サービス「Square」からも届きます。<br>
+      ・24時間を過ぎてもご連絡が届かない場合は、恐れ入りますが下記までお問い合わせください。
+    </div>
+
+    <p class="contact">お問い合わせ：<a href="mailto:leding.clientdesk@gmail.com">leding.clientdesk@gmail.com</a></p>
+    <a class="back" href="./">← サロン紹介ページへ戻る</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  税理士ワークシフトサロン｜運営：税理士法人レディング<br />
+  <a href="./">サロン紹介</a> ｜ <a href="tokushoho.html">特定商取引法に基づく表記</a> ｜ <a href="https://www.leding.or.jp/privacy/" target="_blank" rel="noopener noreferrer">個人情報保護方針</a>
+</footer>
+
+</body>
+</html>
