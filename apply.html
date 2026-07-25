@@ -65,6 +65,9 @@ a{color:var(--gold-deep)}
 .id-item i{display:block;font-style:normal;font-size:.64rem;font-weight:800;letter-spacing:.18em;color:var(--gold-deep)}
 .id-item b{display:block;font-family:var(--serif);font-size:1.2rem;color:var(--ink);line-height:1.4}
 .id-item em{display:block;font-style:normal;font-size:.82rem;font-weight:700;color:var(--muted)}
+.id-item.is-ended{opacity:.55;box-shadow:none;border-top-color:#9aa3b2}
+.id-item.is-ended b{text-decoration:line-through}
+.id-item.is-ended em{color:#b0513f;font-weight:800}
 .intro-note{margin-top:18px;font-size:.78rem;color:rgba(255,255,255,.65)}
 
 /* ---------- form ---------- */
@@ -92,6 +95,9 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 .choice:has(input:checked){border-color:var(--gold);background:#fdf9f1;font-weight:700}
 .choice b{font-weight:inherit}
 .choice small{display:block;font-size:.76rem;font-weight:500;color:var(--muted)}
+.choice.is-ended{opacity:.6;cursor:not-allowed;background:#f1f2f5;border-style:dashed}
+.choice.is-ended b{text-decoration:line-through}
+.choice.is-ended small{color:#b0513f;font-weight:700;text-decoration:none}
 #companion-block{display:none;background:#f7f9fc;border:1px solid var(--line);border-radius:12px;padding:18px 16px;margin-top:12px}
 #companion-block.show{display:block}
 .consent-box{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;font-size:.8rem;color:var(--muted);margin-bottom:24px}
@@ -151,10 +157,10 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-11"/></svg>知識ゼロ・IT苦手でも大丈夫。現在地と次の一歩が見えて帰れます</li>
   </ul>
   <div class="intro-dates">
-    <span class="id-item"><i>第1回</i><b>7月23日（木）</b><em>18:00〜19:00</em></span>
+    <span class="id-item is-ended"><i>第1回</i><b>7月23日（木）</b><em>開催終了</em></span>
     <span class="id-item"><i>第2回</i><b>8月10日（月）</b><em>18:00〜19:00</em></span>
   </div>
-  <p class="intro-note">※どちらの回も同じ内容です。ご都合のよい日をお選びください。お知り合いの先生とのご参加も歓迎です。<br />※本セミナーおよびサロンは、税理士・公認会計士・会計事務所のスタッフ様を対象としています。</p>
+  <p class="intro-note">※第1回（7月23日）は終了しました。次回は8月10日（月）です。お知り合いの先生とのご参加も歓迎です。<br />※本セミナーおよびサロンは、税理士・公認会計士・会計事務所のスタッフ様を対象としています。</p>
 </section>
 
 <div class="form-wrap">
@@ -226,9 +232,8 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
           <div class="frow">
             <span class="flabel">参加希望日<span class="req">必須</span></span>
             <div class="choice-grid">
-              <label class="choice"><input type="radio" name="date" value="7月23日（木）18:00〜19:00" required /><span><b>第1回　7月23日（木）18:00〜19:00</b></span></label>
-              <label class="choice"><input type="radio" name="date" value="8月10日（月）18:00〜19:00" /><span><b>第2回　8月10日（月）18:00〜19:00</b></span></label>
-              <label class="choice"><input type="radio" name="date" value="両日とも参加したい" /><span><b>両日とも参加したい</b><small>※どちらの回も同じ内容です</small></span></label>
+              <label class="choice is-ended"><input type="radio" name="date" value="7月23日（木）18:00〜19:00" disabled /><span><b>第1回　7月23日（木）18:00〜19:00</b><small>※開催を終了しました</small></span></label>
+              <label class="choice"><input type="radio" name="date" value="8月10日（月）18:00〜19:00" required /><span><b>第2回　8月10日（月）18:00〜19:00</b></span></label>
             </div>
           </div>
 
