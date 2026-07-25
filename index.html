@@ -147,6 +147,13 @@ strong{font-weight:700}
 .nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:width .25s;border-radius:2px}
 .nav a:hover::after{width:100%}
 .header-cta{flex:none}
+.header-social{display:flex;gap:10px;align-items:center}
+.header-social a{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.3);transition:color .2s,border-color .2s,background .2s}
+.header-social a:hover{color:#23170a;background:var(--gold-bright);border-color:transparent}
+.header-social svg{width:17px;height:17px;fill:currentColor}
+.site-header.scrolled .header-social a{color:var(--muted);border-color:#d6dce7}
+.site-header.scrolled .header-social a:hover{color:#23170a;background:var(--gold-bright);border-color:transparent}
+@media (max-width:1100px){.header-social{display:none}}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto}
 .nav-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
 .site-header.scrolled .nav-toggle span{background:var(--navy)}
@@ -871,7 +878,7 @@ strong{font-weight:700}
 @media (max-width:760px){
   .pc-only{display:none}
   .sp-only{display:inline}
-  .nav,.header-cta{display:none}
+  .nav,.header-cta,.header-social{display:none}
   .nav-toggle{display:flex}
   .section{padding:72px 0}
   .vs-wrap{grid-template-columns:1fr;gap:18px}
@@ -896,6 +903,10 @@ strong{font-weight:700}
   .mobile-menu{display:flex;flex-direction:column;gap:4px;position:fixed;top:0;right:0;height:100vh;width:80%;max-width:330px;background:var(--navy-900);padding:96px 28px 28px;transform:translateX(100%);transition:transform .35s ease;z-index:50;box-shadow:-20px 0 60px rgba(0,0,0,.5)}
   .mobile-menu.open{transform:translateX(0)}
   .mobile-menu a{color:rgba(255,255,255,.85);padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-weight:500}
+  .mobile-social{display:flex;gap:14px;margin-top:24px;justify-content:center}
+  .mobile-social a{display:grid;place-items:center;width:46px;height:46px;padding:0;border:1px solid rgba(255,255,255,.25);border-radius:50%;color:rgba(255,255,255,.85)}
+  .mobile-social a:hover{color:#23170a;background:var(--gold-bright);border-color:transparent}
+  .mobile-social svg{width:21px;height:21px;fill:currentColor}
   .mobile-menu .btn{margin-top:18px;border-bottom:none}
   .site-header.menu-open .nav-toggle span{background:#fff}
   .site-header.menu-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -925,6 +936,10 @@ strong{font-weight:700}
       <a href="#pricing">料金</a>
       <a href="#faq">FAQ</a>
     </nav>
+    <div class="header-social">
+      <a href="https://www.facebook.com/profile.php?id=61591877494458" target="_blank" rel="noopener noreferrer" aria-label="Facebook（税理士ワークシフトサロン）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.6H6.6v3.56h3.08V22h3.68v-9.14h3.06l.46-3.56h-3.52V7.05c0-1.03.28-1.73 1.76-1.73z"/></svg></a>
+      <a href="https://www.instagram.com/zeirishi_workshift/" target="_blank" rel="noopener noreferrer" aria-label="Instagram（@zeirishi_workshift）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    </div>
     <a href="apply.html" class="btn btn-gold btn-sm header-cta">無料セミナー体験会に申し込む</a>
     <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -939,6 +954,10 @@ strong{font-weight:700}
     <a href="#pricing">料金</a>
     <a href="#faq">FAQ</a>
     <a href="apply.html" class="btn btn-gold">無料セミナー体験会に申し込む</a>
+    <div class="mobile-social">
+      <a href="https://www.facebook.com/profile.php?id=61591877494458" target="_blank" rel="noopener noreferrer" aria-label="Facebook（税理士ワークシフトサロン）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.6H6.6v3.56h3.08V22h3.68v-9.14h3.06l.46-3.56h-3.52V7.05c0-1.03.28-1.73 1.76-1.73z"/></svg></a>
+      <a href="https://www.instagram.com/zeirishi_workshift/" target="_blank" rel="noopener noreferrer" aria-label="Instagram（@zeirishi_workshift）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+    </div>
   </div>
 </header>
 
