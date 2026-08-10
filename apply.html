@@ -125,6 +125,13 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 #thanks p{font-size:.92rem;color:var(--muted);margin-bottom:12px;text-align:left}
 #thanks .tk-back{display:inline-block;margin-top:14px;font-size:.88rem}
 
+/* ---------- closed ---------- */
+.closed-note{text-align:center;padding:14px 0 8px}
+.closed-note .cn-ic{width:66px;height:66px;border-radius:50%;background:var(--grad-navy);display:grid;place-items:center;margin:0 auto 20px}
+.closed-note .cn-ic svg{width:30px;height:30px;color:var(--gold-bright)}
+.closed-note .cn-msg{font-size:.92rem;color:var(--muted);margin:14px auto 8px;line-height:1.95;max-width:480px}
+.closed-note .cn-back{display:inline-block;margin-top:16px;font-size:.9rem;font-weight:700}
+
 /* ---------- footer ---------- */
 .site-footer{background:var(--grad-navy);color:rgba(255,255,255,.6);text-align:center;font-size:.75rem;padding:26px 20px}
 .site-footer a{color:rgba(255,255,255,.75)}
@@ -158,15 +165,22 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
   </ul>
   <div class="intro-dates">
     <span class="id-item is-ended"><i>第1回</i><b>7月23日（木）</b><em>開催終了</em></span>
-    <span class="id-item"><i>第2回</i><b>8月10日（月）</b><em>18:00〜19:00</em></span>
+    <span class="id-item is-ended"><i>第2回</i><b>8月10日（月）</b><em>受付終了</em></span>
   </div>
-  <p class="intro-note">※第1回（7月23日）は終了しました。次回は8月10日（月）です。お知り合いの先生とのご参加も歓迎です。<br />※本セミナーおよびサロンは、税理士・公認会計士・会計事務所のスタッフ様を対象としています。</p>
+  <p class="intro-note">※ 第1回（7月23日）・第2回（8月10日）ともに、お申込みの受付は終了しました。次回開催の日程は、あらためて公式LINE・本サイトにてご案内いたします。<br />※本セミナーおよびサロンは、税理士・公認会計士・会計事務所のスタッフ様を対象としています。</p>
 </section>
 
 <div class="form-wrap">
   <div class="form-card">
 
-    <div id="form-view">
+    <div class="closed-note">
+      <div class="cn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></div>
+      <h2 class="fc-title">お申込みの受付は終了しました</h2>
+      <p class="cn-msg">このたびは、無料セミナー体験会に多くのお申込みをいただき、誠にありがとうございました。<br>次回開催の日程は、あらためて公式LINE・本サイトにてご案内いたします。</p>
+      <a class="cn-back" href="./">← サロン紹介ページへ戻る</a>
+    </div>
+
+    <div id="form-view" style="display:none">
       <h2 class="fc-title">お申込みフォーム</h2>
       <p class="fc-sub">ご入力は約1分で完了します。<br />受付後、確認メールをお送りします。</p>
 
