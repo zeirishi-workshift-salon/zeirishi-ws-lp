@@ -149,7 +149,13 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
           <div class="frow">
             <label for="email">メールアドレス<span class="req">必須</span></label>
             <input type="email" name="email" id="email" placeholder="例：example@gmail.com" required autocomplete="email" />
-            <p class="fhint">ご入会後のご案内・スタート会のご連絡をお送りします。お間違いのないようご入力ください。</p>
+            <p class="fhint">ご入会後のご案内・スタート会のご連絡をお送りします。<br>このメールアドレスは、ご入会後にご案内する<b>会員様専用ポータルサイトのご登録</b>にも利用させていただきます。お間違いのないようご入力ください。</p>
+          </div>
+
+          <div class="frow">
+            <label for="email2">メールアドレス（確認用）<span class="req">必須</span></label>
+            <input type="email" name="email2" id="email2" placeholder="もう一度ご入力ください" required autocomplete="off" readonly />
+            <p class="fhint">※お間違い防止のため、自動入力・貼り付けはできません。お手数ですが、もう一度ご入力ください。</p>
           </div>
 
           <div class="frow">
@@ -172,6 +178,23 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
               <label class="choice"><input type="radio" name="role" value="会計事務所スタッフ" /><b>会計事務所スタッフ</b></label>
               <label class="choice"><input type="radio" name="role" value="その他" /><b>その他</b></label>
             </div>
+          </div>
+
+          <div class="frow">
+            <span class="flabel">ご利用の会計ソフト<span class="req">必須</span> <span style="font-weight:500;color:var(--muted);font-size:.78rem">複数選択できます</span></span>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+              <label class="choice"><input type="checkbox" name="accounting" value="弥生会計" /><b>弥生会計</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="freee会計" /><b>freee会計</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="マネーフォワード クラウド会計" /><b>マネーフォワード</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="TKC" /><b>TKC</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="勘定奉行（OBC）" /><b>勘定奉行（OBC）</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="JDL" /><b>JDL</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="ミロク（MJS）" /><b>ミロク（MJS）</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="PCA会計" /><b>PCA会計</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="その他" id="acc_other_cb" /><b>その他</b></label>
+              <label class="choice"><input type="checkbox" name="accounting" value="特に使っていない・未定" /><b>特に使っていない</b></label>
+            </div>
+            <input type="text" name="accounting_other" id="accounting_other" placeholder="その他の会計ソフト名をご記入ください" style="display:none;margin-top:10px" />
           </div>
         </fieldset>
 
@@ -223,17 +246,52 @@ PREFS.forEach(function(p){ var o = document.createElement("option"); o.value = p
 
 var form = document.getElementById("joinForm");
 var errMsg = document.getElementById("errMsg");
+
+/* メール確認欄：自動入力・貼り付けを防ぎ、必ず手入力にする */
+var email2El = document.getElementById("email2");
+["focus","touchstart"].forEach(function(ev){
+  email2El.addEventListener(ev, function(){ email2El.removeAttribute("readonly"); });
+});
+["paste","drop"].forEach(function(ev){
+  email2El.addEventListener(ev, function(e){ e.preventDefault(); });
+});
+
+/* 会計ソフト「その他」：記入欄の表示切替 */
+var accOtherCb = document.getElementById("acc_other_cb");
+var accOtherInput = document.getElementById("accounting_other");
+accOtherCb.addEventListener("change", function(){
+  accOtherInput.style.display = accOtherCb.checked ? "block" : "none";
+  if (accOtherCb.checked) accOtherInput.focus();
+});
+
 form.addEventListener("submit", function(ev){
   ev.preventDefault();
   errMsg.classList.remove("show");
 
+  /* メールアドレス一致チェック */
+  var emailEl = document.getElementById("email");
+  var email2Chk = document.getElementById("email2");
+  email2Chk.setCustomValidity(emailEl.value.trim() !== email2Chk.value.trim() ? "メールアドレスが一致しません" : "");
+
   if (!form.checkValidity()){
     var bad = form.querySelector(":invalid");
     var msg = "未入力の必須項目があります。ご確認ください。";
+    if (bad === email2Chk && email2Chk.validationMessage.indexOf("一致") !== -1) msg = "メールアドレス（確認用）が一致しません。";
     if (bad && bad.id === "consent") msg = "ご入会にあたってのご確認への同意をお願いします。";
     errMsg.textContent = msg;
     errMsg.classList.add("show");
     if (bad){ bad.scrollIntoView({behavior:"smooth", block:"center"}); if (bad.focus) bad.focus({preventScroll:true}); }
+    return;
+  }
+
+  /* 会計ソフト：1つ以上選択（チェックボックスは標準の必須チェックが効かないため個別に確認） */
+  var accBoxes = form.querySelectorAll('input[name="accounting"]');
+  var accOne = Array.prototype.some.call(accBoxes, function(c){ return c.checked; });
+  if (!accOne){
+    errMsg.textContent = "ご利用の会計ソフトを1つ以上お選びください。";
+    errMsg.classList.add("show");
+    accBoxes[0].scrollIntoView({behavior:"smooth", block:"center"});
+    if (accBoxes[0].focus) accBoxes[0].focus({preventScroll:true});
     return;
   }
 
@@ -246,6 +304,10 @@ form.addEventListener("submit", function(ev){
   var fd = new FormData(form);
   var data = {formType: "join"};
   fd.forEach(function(v, k){ data[k] = String(v).trim(); });
+  var accOtherVal = (fd.get("accounting_other") || "").trim();
+  data.accounting = fd.getAll("accounting").map(function(x){
+    return (x === "その他" && accOtherVal) ? "その他：" + accOtherVal : x;
+  }).join(" / ");
 
   var btn = document.getElementById("submitBtn");
   btn.disabled = true;

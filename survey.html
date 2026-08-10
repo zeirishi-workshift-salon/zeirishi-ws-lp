@@ -110,6 +110,14 @@ textarea{min-height:96px;resize:vertical}
 .thanks h2{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin-bottom:14px}
 .thanks p{font-size:.92rem;color:var(--muted);margin-bottom:14px;text-align:left}
 .thanks .tk-back{display:inline-block;margin-top:14px;font-size:.88rem}
+.gift-box{background:var(--grad-navy);color:#fff;border-radius:14px;padding:26px 22px;margin:24px 0;box-shadow:0 12px 32px rgba(12,27,48,.18)}
+.gift-box .gift-eyebrow{display:block;font-size:.7rem;font-weight:800;letter-spacing:.16em;color:var(--gold-bright);text-align:center;margin-bottom:8px}
+.gift-box .gift-title{font-family:var(--serif);font-size:1.32rem;font-weight:700;line-height:1.4;text-align:center;margin-bottom:12px;color:#fff}
+.gift-box .gift-sub{font-size:.83rem;color:rgba(255,255,255,.82);line-height:1.8;text-align:center;margin-bottom:18px}
+.gift-box .gift-btn{text-align:center}
+.gift-box .btn-gold{font-size:1rem;padding:.9em 2.2em}
+.gift-hint{margin-top:16px;font-size:.82rem;color:var(--gold-deep);background:#fdf9f1;border:1px solid rgba(176,137,73,.35);border-radius:10px;padding:11px 14px;line-height:1.75;text-align:center}
+.gift-hint b{color:var(--gold-deep)}
 
 .site-footer{background:var(--grad-navy);color:rgba(255,255,255,.6);text-align:center;font-size:.75rem;padding:26px 20px}
 .site-footer a{color:rgba(255,255,255,.75)}
@@ -150,6 +158,21 @@ textarea{min-height:96px;resize:vertical}
         <input type="text" name="website" id="hp" style="position:absolute;left:-9999px;opacity:0" tabindex="-1" autocomplete="off" />
 
         <fieldset>
+          <legend>ご回答者さまについて</legend>
+
+          <div class="frow">
+            <label for="name">お名前<span class="req">必須</span></label>
+            <input type="text" name="name" id="name" placeholder="例：木下 勇人" required autocomplete="name" />
+          </div>
+
+          <div class="frow">
+            <label for="email">メールアドレス<span class="req">必須</span></label>
+            <input type="email" name="email" id="email" placeholder="例：example@gmail.com" required autocomplete="email" />
+            <p class="fhint">ご回答内容の確認や、今後のご案内をお送りする場合があります。お間違いのないようご入力ください。</p>
+          </div>
+        </fieldset>
+
+        <fieldset>
           <legend>本日のアンケート</legend>
 
           <div class="frow">
@@ -167,8 +190,8 @@ textarea{min-height:96px;resize:vertical}
           <div class="frow">
             <span class="flabel">特に印象に残った項目はどれですか？<span class="opt">任意・複数可</span></span>
             <div class="choice-grid">
-              <label class="choice"><input type="checkbox" name="impressed" value="【実演】証憑が仕訳になるまで" /><b>【実演】証憑が仕訳になるまで</b></label>
-              <label class="choice"><input type="checkbox" name="impressed" value="【実演】今日から誰でもできる（渡すだけで成果物になる）" /><b>【実演】今日から誰でもできる — 渡すだけで成果物になる</b></label>
+              <label class="choice"><input type="checkbox" name="impressed" value="【ライブ実演】今日から誰でもできる、AIエージェントにファイル整理を任せる" /><b>【ライブ実演】今日から誰でもできる、AIエージェントにファイル整理を任せる</b></label>
+              <label class="choice"><input type="checkbox" name="impressed" value="AIで、仕事はここまで変わる——効率化の実例" /><b>AIで、仕事はここまで変わる——効率化の実例</b></label>
               <label class="choice"><input type="checkbox" name="impressed" value="一人も置き去りにしないサポートサービス" /><b>一人も置き去りにしないサポートサービス</b></label>
               <label class="choice"><input type="checkbox" name="impressed" value="すぐ使えるもの（AIキノシタくん・AI必殺仕訳人・AIナレッジ）" /><b>すぐ使えるもの — AIキノシタくん・AI必殺仕訳人・AIナレッジ</b></label>
               <label class="choice"><input type="checkbox" name="impressed" value="ワークシフト（変化のその先へ）" /><b>ワークシフト — 変化のその先へ</b></label>
@@ -208,7 +231,7 @@ textarea{min-height:96px;resize:vertical}
               </div>
               <div class="next-hint" id="nextHint">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                <span>このまま送信ボタンを押すと、<b>ご入会のお申し込みフォーム</b>（お名前・お支払い）に進みます。</span>
+                <span><b>「お申し込みフォームへ進む」</b>ボタンを押すと、ご入会のお手続き（お名前・お支払い）に進みます。</span>
               </div>
             </div>
           </div>
@@ -228,7 +251,7 @@ textarea{min-height:96px;resize:vertical}
 
         <div class="submit-area">
           <button type="submit" class="btn-gold" id="submitBtn">アンケートを送信する <span aria-hidden="true">→</span></button>
-          <p class="submit-note" id="submitNote">ご協力ありがとうございます。</p>
+          <p class="submit-note" id="submitNote">ご協力ありがとうございます。次のページで、特典の「AIエージェントのはじめかたガイド」リンクをお受け取りください。</p>
         </div>
       </form>
     </div>
@@ -242,6 +265,7 @@ textarea{min-height:96px;resize:vertical}
         <a class="btn-gold" href="join.html">ご入会のお手続きへ進む <span aria-hidden="true">→</span></a>
         <p class="submit-note">この先で、お名前のご入力とお支払い（Square）にお進みいただけます。</p>
       </div>
+      <p class="gift-hint">ご参加特典「AIエージェント はじめかたガイド」は、<b>お支払い完了後の画面</b>、および事務局からのご案内メールにてお受け取りいただけます。</p>
     </div>
 
     <!-- 検討・見送りの方への完了画面 -->
@@ -249,6 +273,14 @@ textarea{min-height:96px;resize:vertical}
       <div class="tk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg></div>
       <h2>ご回答ありがとうございました</h2>
       <p>いただいたご意見は、これからの運営に大切に生かしてまいります。<br>「前向きに検討したい」とお答えいただいた先生には、あらためてご案内をお送りします。</p>
+
+      <div class="gift-box">
+        <span class="gift-eyebrow">SEMINAR GIFT ／ ご参加者さま特典</span>
+        <div class="gift-title">AIエージェント はじめかたガイド</div>
+        <div class="gift-sub">Claude Code / Codex のはじめ方、15分ではじめてのバイブコーディング、<br>サロンの講座ムービー2本つき。</div>
+        <div class="gift-btn"><a class="btn-gold" href="https://zeirishi-ws-portal-three.vercel.app/gift" target="_blank" rel="noopener noreferrer">特典を受け取る <span aria-hidden="true">→</span></a></div>
+      </div>
+
       <p>ご不明な点は、<a href="mailto:leding.clientdesk@gmail.com">leding.clientdesk@gmail.com</a> までお気軽にどうぞ。</p>
       <a class="tk-back" href="./">← サロン紹介ページへ</a>
     </div>
@@ -296,7 +328,7 @@ function refreshCta(){
   submitBtn.innerHTML = (join ? "お申し込みフォームへ進む" : "アンケートを送信する") + ' <span aria-hidden="true">→</span>';
   document.getElementById("submitNote").textContent = join
     ? "送信後、ご入会のお申し込みフォーム（お名前・お支払い）に進みます。"
-    : "ご協力ありがとうございます。";
+    : "ご協力ありがとうございます。次のページで、特典の「AIエージェントのはじめかたガイド」リンクをお受け取りください。";
 }
 document.querySelectorAll('input[name="intent"]').forEach(function(r){
   r.addEventListener("change", refreshCta);
@@ -311,7 +343,9 @@ form.addEventListener("submit", function(ev){
   if (!form.checkValidity()){
     var bad = form.querySelector(":invalid");
     var msg = "未入力の必須項目があります。ご確認ください。";
-    if (!document.querySelector('input[name="satisfaction"]:checked')) msg = "本日のご満足度をお選びください。";
+    if (!document.getElementById("name").value.trim()) msg = "お名前をご入力ください。";
+    else if (bad && bad.id === "email") msg = "メールアドレスを正しくご入力ください。";
+    else if (!document.querySelector('input[name="satisfaction"]:checked')) msg = "本日のご満足度をお選びください。";
     else if (!intent) msg = "今後についてのご希望をお選びください。";
     errMsg.textContent = msg;
     errMsg.classList.add("show");

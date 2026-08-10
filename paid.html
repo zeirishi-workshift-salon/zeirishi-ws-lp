@@ -48,6 +48,13 @@ a{color:var(--gold-deep)}
 .contact a{font-weight:700}
 .back{display:inline-block;margin-top:26px;font-size:.9rem;font-weight:700;color:var(--gold-deep);text-decoration:none}
 .back:hover{text-decoration:underline;text-underline-offset:3px}
+.btn-gold{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--sans);font-weight:700;font-size:1.06rem;color:#23170a;background:var(--grad-gold);border:none;border-radius:999px;padding:1.05em 2.6em;max-width:100%;line-height:1.45;cursor:pointer;text-decoration:none;box-shadow:0 14px 30px rgba(140,104,46,.4),inset 0 1px 0 rgba(255,255,255,.4);transition:transform .25s ease,box-shadow .25s ease}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(140,104,46,.5)}
+.gift-box{background:var(--grad-navy);color:#fff;border-radius:14px;padding:26px 22px;margin:28px 0 4px;box-shadow:0 12px 32px rgba(12,27,48,.18)}
+.gift-box .gift-eyebrow{display:block;font-size:.7rem;font-weight:800;letter-spacing:.16em;color:var(--gold-bright);margin-bottom:8px}
+.gift-box .gift-title{font-family:var(--serif);font-size:1.3rem;font-weight:700;line-height:1.4;margin-bottom:12px;color:#fff}
+.gift-box .gift-sub{font-size:.83rem;color:rgba(255,255,255,.82);line-height:1.8;margin-bottom:18px}
+.gift-box .btn-gold{font-size:1rem;padding:.9em 2.2em}
 
 .site-footer{background:var(--grad-navy);color:rgba(255,255,255,.6);text-align:center;font-size:.75rem;padding:26px 20px}
 .site-footer a{color:rgba(255,255,255,.75)}
@@ -69,6 +76,13 @@ a{color:var(--gold-deep)}
     <span class="eyebrow">お手続き完了</span>
     <h1>お申込みいただき、<br>ありがとうございました。</h1>
     <p class="msg">事務局より<b>24時間以内にご連絡</b>いたします。<br>ご案内まで、今しばらくお待ちください。</p>
+
+    <div class="gift-box">
+      <span class="gift-eyebrow">SEMINAR GIFT ／ ご入会・ご参加の特典</span>
+      <div class="gift-title">AIエージェント はじめかたガイド</div>
+      <div class="gift-sub">Claude Code / Codex のはじめ方、15分ではじめてのバイブコーディング、サロンの講座ムービー2本つき。</div>
+      <a class="btn-gold" href="https://zeirishi-ws-portal-three.vercel.app/gift" target="_blank" rel="noopener noreferrer">特典を受け取る <span aria-hidden="true">→</span></a>
+    </div>
 
     <div class="notebox">
       <div class="nb-t">このあとの流れ</div>
