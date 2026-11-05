@@ -171,6 +171,12 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
           </div>
 
           <div class="frow">
+            <label for="phone">日中ご連絡のつく電話番号<span class="req">必須</span></label>
+            <input type="tel" name="phone" id="phone" inputmode="tel" placeholder="例：09012345678（ハイフンなし）" required autocomplete="tel" />
+            <p class="fhint">携帯電話でも構いません。メールでご連絡が取れない場合など、事務局からの確認が必要なときにのみ使用いたします。</p>
+          </div>
+
+          <div class="frow">
             <span class="flabel">資格・お立場<span class="req">必須</span></span>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
               <label class="choice"><input type="radio" name="role" value="税理士" required /><b>税理士</b></label>
@@ -284,6 +290,17 @@ form.addEventListener("submit", function(ev){
     return;
   }
 
+  /* 電話番号：全角数字・ハイフンを整えて、10〜11桁の数字か確認 */
+  var phoneEl = document.getElementById("phone");
+  var phoneDigits = phoneEl.value.replace(/[０-９]/g, function(c){ return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); }).replace(/[^0-9]/g, "");
+  if (!/^0\d{9,10}$/.test(phoneDigits)){
+    errMsg.textContent = "電話番号は、市外局番または携帯番号から、数字10〜11桁でご入力ください（例：09012345678）。";
+    errMsg.classList.add("show");
+    phoneEl.scrollIntoView({behavior:"smooth", block:"center"});
+    phoneEl.focus({preventScroll:true});
+    return;
+  }
+
   /* 会計ソフト：1つ以上選択（チェックボックスは標準の必須チェックが効かないため個別に確認） */
   var accBoxes = form.querySelectorAll('input[name="accounting"]');
   var accOne = Array.prototype.some.call(accBoxes, function(c){ return c.checked; });
@@ -304,6 +321,7 @@ form.addEventListener("submit", function(ev){
   var fd = new FormData(form);
   var data = {formType: "join"};
   fd.forEach(function(v, k){ data[k] = String(v).trim(); });
+  data.phone = phoneDigits;
   var accOtherVal = (fd.get("accounting_other") || "").trim();
   data.accounting = fd.getAll("accounting").map(function(x){
     return (x === "その他" && accOtherVal) ? "その他：" + accOtherVal : x;
